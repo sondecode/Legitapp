@@ -15,7 +15,7 @@ struct ServicesView: View {
             // Header
             HStack {
                 Text("Services")
-                    .font(.appliteLargeTitle)
+                    .font(.legitLargeTitle)
 
                 Spacer()
 

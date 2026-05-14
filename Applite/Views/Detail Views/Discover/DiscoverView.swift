@@ -21,7 +21,7 @@ struct DiscoverView: View {
                     .padding(.bottom, 8)
 
                 Text("Discover", comment: "Discover view title")
-                    .font(.appliteLargeTitle)
+                    .font(.legitLargeTitle)
                     .padding(.bottom)
 
                 ForEach(caskManager.categories) { category in

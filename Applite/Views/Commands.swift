@@ -17,7 +17,7 @@ struct CommandsMenu: Commands {
         SidebarCommands()
         
         CommandGroup(before: .systemServices) {
-            Button("Uninstall Applite...") {
+            Button("Uninstall LegitApp...") {
                 openWindow(id: "uninstall-self")
             }
             
@@ -32,11 +32,8 @@ struct CommandsMenu: Commands {
         
         
         CommandGroup(replacing: .help) {
-            Link("Website", destination: URL(string: "https://aerolite.dev/applite")!)
-            Link("Troubleshooting", destination: URL(string: "https://aerolite.dev/applite/troubleshooting.html")!)
-            Link("GitHub", destination: URL(string: "https://github.com/milanvarady/Applite")!)
-            Link("Discord", destination: URL(string: "https://discord.gg/MpDMH9cPbK")!)
-            Link("Sponsor", destination: URL(string: "https://www.paypal.com/donate/?hosted_button_id=ZMDZSRG9CRY2Y")!)
+            Link("Website", destination: URL(string: "https://sondecode.github.io/legitapp")!)
+            Link("GitHub", destination: URL(string: "https://github.com/sondecode/legitapp")!)
         }
     }
 }

@@ -67,7 +67,7 @@ struct SetupView: View {
                     nextPage: .allSet,
                     additionalLinks: [
                         PageLink(title: "Use different brew path", page: .brewPathSelection),
-                        PageLink(title: "Install separate brew for Applite", page: .appliteBrewInstall)
+                        PageLink(title: "Install separate brew for LegitApp", page: .appliteBrewInstall)
                     ]
                 )
 

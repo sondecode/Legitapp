@@ -8,8 +8,12 @@
 import Foundation
 
 extension Bundle {
-    var version: String {
+    var appVersion: String {
         return infoDictionary?["CFBundleShortVersionString"] as? String ?? "N/A"
+    }
+
+    var version: String {
+        return appVersion
     }
     
     var buildNumber: String {

@@ -35,7 +35,7 @@ extension BrewManagementView {
         var body: some View {
             VStack(alignment: .leading) {
                 Text("Actions", comment: "Brew Management view action section title")
-                    .font(.appliteSmallTitle)
+                    .font(.legitSmallTitle)
 
                 HStack {
                     ActionCard(
@@ -53,8 +53,8 @@ extension BrewManagementView {
                         padding: cardPadding,
                         actionSuccessful: $reinstallDone,
                         remarks: [
-                            .init(title: "Note", color: .blue, remark: "This will (re)install Applite's Homebrew installation at: `~/Library/Application Support/Applite/homebrew`"),
-                            .init(title: "Warning", color: .orange, remark: "After reinstalling, all currently installed apps will be unlinked from Applite. They won't be deleted, but you won't be able to update or uninstall them via Applite.")
+                            .init(title: "Note", color: .blue, remark: "This will (re)install LegitApp's Homebrew installation at: `~/Library/Application Support/LegitApp/homebrew`"),
+                            .init(title: "Warning", color: .orange, remark: "After reinstalling, all currently installed apps will be unlinked from LegitApp. They won't be deleted, but you won't be able to update or uninstall them via LegitApp.")
                         ]
                     ) {
                         reinstallButton
@@ -173,9 +173,9 @@ extension BrewManagementView {
                 Button("Cancel", role: .cancel) { }
             } message: {
                 if isAppBrewInstalled {
-                    Text("All currently installed apps will be unlinked from Applite.", comment: "Brew reinstallation alert warning")
+                    Text("All currently installed apps will be unlinked from LegitApp.", comment: "Brew reinstallation alert warning")
                 } else {
-                    Text("A new Homebrew installation will be installed into `~/Library/Application Support/Applite`", comment: "Brew installation alert notice")
+                    Text("A new Homebrew installation will be installed into `~/Library/Application Support/LegitApp`", comment: "Brew installation alert notice")
                 }
             }
             .alert("Reinstall failed", isPresented: $reinstallFailed, actions: {

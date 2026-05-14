@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>LegitApp</title>
+    <link>https://sondecode.github.io/legitapp</link>
+    <description>LegitApp – Quản lý ứng dụng macOS</description>
+    <language>vi</language>
+
+    <!--
+      ============================================================
+      HƯỚNG DẪN CẬP NHẬT KHI RELEASE MỚI
+      ============================================================
+      1. Build DMG trong Xcode: Product → Archive → Distribute App → Direct Distribution
+      2. Ký update:
+           ./<path_to_sparkle>/bin/sign_update LegitApp.dmg
+         Copy "edSignature" từ output JSON vào sparkle:edSignature bên dưới.
+      3. Cập nhật các trường: title, sparkle:version, sparkle:shortVersionString, pubDate,
+         url (download link), length (bytes), sparkle:edSignature
+      4. Tạo GitHub Release với tag v<version>, upload LegitApp.dmg
+      5. git commit + git push → GitHub Pages tự cập nhật
+      ============================================================
+    -->
+
+    <item>
+      <title>1.0.0</title>
+      <pubDate>Wed, 14 May 2026 00:00:00 +0700</pubDate>
+      <sparkle:version>1</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>
+        https://github.com/sondecode/legitapp/releases/tag/v1.0.0
+      </sparkle:releaseNotesLink>
+      <description><![CDATA[
+        <h2>LegitApp 1.0.0</h2>
+        <ul>
+          <li>Phiên bản đầu tiên dành cho thị trường Việt Nam</li>
+          <li>Giao diện tiếng Việt đầy đủ</li>
+          <li>Danh mục Ứng dụng Việt Nam: Zalo, Cốc Cốc, CapCut...</li>
+          <li>Quản lý Homebrew Services (start/stop/restart)</li>
+          <li>Theo dõi qua Menu Bar</li>
+          <li>Hỗ trợ macOS 14 Sonoma+</li>
+        </ul>
+      ]]></description>
+      <enclosure
+        url="https://github.com/sondecode/legitapp/releases/download/v1.0.0/LegitApp.dmg"
+        length="0"
+        type="application/octet-stream"
+        sparkle:edSignature="REPLACE_WITH_SIGN_UPDATE_OUTPUT" />
+    </item>
+
+  </channel>
+</rss>

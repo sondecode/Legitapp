@@ -136,13 +136,46 @@ final class CaskDataCoordinator {
         return try await installedService.getInstalledCasks()
     }
 
-    /// Loads category data from JSON file
+    private static let categoriesCacheURL = URL.cachesDirectory
+        .appendingPathComponent("LegitApp", conformingTo: .directory)
+        .appendingPathComponent("categories_remote.json", conformingTo: .json)
+
+    /// Loads category data — tries remote GitHub URL first, then cache, then bundle
     private func loadCategories() async throws -> [Category] {
         let decoder = JSONDecoder()
+
+        // 1. Try remote URL from Info.plist
+        if let urlString = Bundle.main.infoDictionary?["LegitAppCategoriesURL"] as? String,
+           let remoteURL = URL(string: urlString) {
+            do {
+                var request = URLRequest(url: remoteURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 6)
+                request.setValue("LegitApp/\(Bundle.main.appVersion)", forHTTPHeaderField: "User-Agent")
+                let (data, _) = try await URLSession.shared.data(for: request)
+                let categories = try decoder.decode([Category].self, from: data)
+                // Cache for offline use
+                let cacheDir = Self.categoriesCacheURL.deletingLastPathComponent()
+                try? FileManager.default.createDirectory(at: cacheDir, withIntermediateDirectories: true)
+                try? data.write(to: Self.categoriesCacheURL)
+                logger.info("Loaded categories from remote")
+                return categories
+            } catch {
+                logger.warning("Remote categories fetch failed: \(error.localizedDescription)")
+            }
+        }
+
+        // 2. Fallback: cached remote version
+        if FileManager.default.fileExists(atPath: Self.categoriesCacheURL.path),
+           let data = try? Data(contentsOf: Self.categoriesCacheURL),
+           let categories = try? decoder.decode([Category].self, from: data) {
+            logger.info("Loaded categories from disk cache")
+            return categories
+        }
+
+        // 3. Fallback: bundle (always available)
         guard let url = Bundle.main.url(forResource: "categories", withExtension: "json") else {
             throw CaskLoadError.failedToLoadCategoryJSON
         }
-
+        logger.info("Loaded categories from bundle")
         let data = try Data(contentsOf: url)
         return try decoder.decode([Category].self, from: data)
     }

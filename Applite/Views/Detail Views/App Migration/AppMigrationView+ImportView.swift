@@ -21,7 +21,7 @@ extension AppMigrationView {
         var body: some View {
             VStack(alignment: .leading) {
                 Text("Import", comment: "App Migration import card title")
-                    .font(.appliteSmallTitle)
+                    .font(.legitSmallTitle)
 
                 HStack {
                     Button {

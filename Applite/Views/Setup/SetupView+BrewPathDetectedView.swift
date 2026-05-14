@@ -16,7 +16,7 @@ extension SetupView {
                 Spacer()
 
                 Text("Brew Installation Detected", comment: "Setup brew path detected view title")
-                    .font(.appliteSmallTitle)
+                    .font(.legitSmallTitle)
                     .padding(.bottom)
 
                 Text("A brew installation was detected at:", comment: "Setup brew path detected view text")

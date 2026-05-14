@@ -11,7 +11,7 @@ extension BrewPathSelectorView {
     func getPathDescription(for option: BrewPaths.PathOption) -> LocalizedStringKey {
         switch option {
         case .appPath:
-            return "Applite's installation"
+            return "LegitApp's installation"
 
         case .defaultAppleSilicon:
             return "Apple Silicon Mac"

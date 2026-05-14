@@ -58,7 +58,7 @@ struct UninstallSelfView: View {
             Spacer()
         }
         .frame(width: 400, height: 320)
-        .confirmationDialog("Are you sure you want to permanently uninstall Applite?", isPresented: $showConfirmation) {
+        .confirmationDialog("Are you sure you want to permanently uninstall LegitApp?", isPresented: $showConfirmation) {
             Button("Uninstall", role: .destructive) {
                 Task.detached {
                     do {

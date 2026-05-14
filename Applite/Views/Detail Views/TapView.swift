@@ -15,7 +15,7 @@ struct TapView: View {
             // Tap name
             Group {
                 Text(tap.title)
-                    .font(.appliteMediumTitle)
+                    .font(.legitMediumTitle)
                     .padding(.bottom, -20)
 
                 Divider()

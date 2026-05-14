@@ -17,7 +17,7 @@ extension SetupView {
                 Spacer()
 
                 Text("Homebrew Installation", comment: "Setup Applite's brew installation info view title")
-                    .font(.appliteMediumTitle)
+                    .font(.legitMediumTitle)
                     .padding(.bottom, 8)
 
                 Text(

@@ -27,7 +27,7 @@ extension SetupView {
         var body: some View {
             VStack {
                 Text("Installing dependencies", comment: "Brew dependency installation view title")
-                    .font(.appliteSmallTitle)
+                    .font(.legitSmallTitle)
                     .padding(.vertical)
                     .padding(.top, 10)
 
@@ -41,7 +41,7 @@ extension SetupView {
 
                     // Homebrew
                     dependencyView(title: "Homebrew",
-                                   description: "[Homebrew](https://brew.sh) is a free and open source package manager tool that makes installing third-party applications really easy. Applite uses Homebrew under the hood to download and manage applications.",
+                                   description: "[Homebrew](https://brew.sh) is a free and open source package manager tool that makes installing third-party applications really easy. LegitApp uses Homebrew under the hood to download and manage applications.",
                                    progressOrder: .fetchingHomebrew)
 
                     // Retry button
@@ -71,7 +71,7 @@ extension SetupView {
                 }
                 .alert(installAlert.title, isPresented: $installAlert.isPresented) {
                     Button("Troubleshooting", systemImage: "exclamationmark.magnifyingglass") {
-                        openURL(URL(string: "https://aerolite.dev/applite/troubleshooting.html")!)
+                        openURL(URL(string: "https://github.com/sondecode/legitapp")!)
                     }
 
                     Button("Quit", role: .destructive) { NSApplication.shared.terminate(self) }

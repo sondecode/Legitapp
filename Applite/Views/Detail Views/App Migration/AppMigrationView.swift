@@ -38,7 +38,7 @@ struct AppMigrationView: View {
     var titleAndDescription: some View {
         VStack(alignment: .leading) {
             Text("App Migration", comment: "App Migration view title")
-                .font(.appliteMediumTitle)
+                .font(.legitMediumTitle)
                 .padding(.bottom, 2)
 
             Text(

@@ -21,7 +21,7 @@ extension AppMigrationView {
         var body: some View {
             VStack(alignment: .leading) {
                 Text("Export", comment: "App migration export card title")
-                    .font(.appliteSmallTitle)
+                    .font(.legitSmallTitle)
 
                 HStack {
                     AsyncButton {
@@ -43,12 +43,12 @@ extension AppMigrationView {
                 }
                 .padding(.bottom, 10)
 
-                Text("Export all apps currently installed by Applite to a file.", comment: "App Migration export card description")
+                Text("Export all apps currently installed by LegitApp to a file.", comment: "App Migration export card description")
 
                 Spacer()
             }
             .alertManager(alert)
-            .fileExporter(isPresented: $showFileExporter, document: exportFile,  contentType: .plainText, defaultFilename: "applite_export") { result in
+            .fileExporter(isPresented: $showFileExporter, document: exportFile,  contentType: .plainText, defaultFilename: "legitapp_export") { result in
                 switch result {
                 case .success(let url):
                     logger.notice("Successful cask export: \(url.path(percentEncoded: false))")

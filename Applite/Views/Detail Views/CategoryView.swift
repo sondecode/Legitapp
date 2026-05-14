@@ -16,7 +16,7 @@ struct CategoryView: View {
             // Category name
             Group {
                 Text(category.localizedName)
-                    .font(.appliteMediumTitle)
+                    .font(.legitMediumTitle)
                     .padding(.bottom, -20)
                 
                 Divider()

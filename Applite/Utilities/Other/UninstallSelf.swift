@@ -27,17 +27,17 @@ func uninstallSelf(deleteBrewCache: Bool, uninstallHomebrew: Bool = false) async
 
     // Delete related files and cache (using -rf to ignore missing files)
     let command = """
-    rm -rf "$HOME/Library/Application Support/Applite";
+    rm -rf "$HOME/Library/Application Support/LegitApp";
     rm -rf "$HOME/Library/Application Support/\(Bundle.main.bundleIdentifier!)";
     rm -rf $HOME/Library/Containers/\(Bundle.main.bundleIdentifier!);
-    rm -rf $HOME/Library/Caches/Applite;
+    rm -rf $HOME/Library/Caches/LegitApp;
     rm -rf $HOME/Library/Caches/\(Bundle.main.bundleIdentifier!);
-    rm -rf $HOME/Library/Applite;
+    rm -rf $HOME/Library/LegitApp;
     rm -rf $HOME/Library/Preferences/*\(Bundle.main.bundleIdentifier!)*.plist;
     rm -rf "$HOME/Library/Saved Application State/\(Bundle.main.bundleIdentifier!).savedState";
     rm -rf $HOME/Library/SyncedPreferences/\(Bundle.main.bundleIdentifier!)*.plist;
     rm -rf $HOME/Library/WebKit/\(Bundle.main.bundleIdentifier!);
-    rm -rf $HOME/Library/HTTPStorages/dev.aerolite.Applite
+    rm -rf $HOME/Library/HTTPStorages/dev.legit.app
     """
     
     logger.notice("Running command: \(command)")
@@ -64,7 +64,7 @@ func uninstallSelf(deleteBrewCache: Bool, uninstallHomebrew: Bool = false) async
     // Quit the app and remove it
     let process = Process()
     process.launchPath = "/bin/bash"
-    process.arguments = ["-c", "osascript -e 'tell application \"Applite\" to quit' && sleep 2 && rm -rf \"\(Bundle.main.bundlePath)\" && defaults write \(Bundle.main.bundleIdentifier!) setupComplete 0"]
+    process.arguments = ["-c", "osascript -e 'tell application \"LegitApp\" to quit' && sleep 2 && rm -rf \"\(Bundle.main.bundlePath)\" && defaults write \(Bundle.main.bundleIdentifier!) setupComplete 0"]
     process.launch()
 }
 

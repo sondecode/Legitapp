@@ -11,14 +11,14 @@ import OSLog
 /// Responsible for managing cache operations for cask data
 struct CaskCacheService {
     private static let cacheDirectory = URL.cachesDirectory
-        .appendingPathComponent("Applite", conformingTo: .directory)
+        .appendingPathComponent("LegitApp", conformingTo: .directory)
 
     static let caskCacheURL = URL.cachesDirectory
-        .appendingPathComponent("Applite", conformingTo: .directory)
+        .appendingPathComponent("LegitApp", conformingTo: .directory)
         .appendingPathComponent("cask.json", conformingTo: .json)
 
     static let analyticsCacheURL = URL.cachesDirectory
-        .appendingPathComponent("Applite", conformingTo: .directory)
+        .appendingPathComponent("LegitApp", conformingTo: .directory)
         .appendingPathComponent("caskAnalytics.json", conformingTo: .json)
 
     private let logger = Logger(

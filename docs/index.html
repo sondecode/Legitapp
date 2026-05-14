@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegitApp – Quản lý ứng dụng macOS dễ dàng</title>
+  <meta name="description" content="LegitApp giúp bạn cài đặt, cập nhật và gỡ bỏ hàng nghìn ứng dụng macOS bằng Homebrew — giao diện đẹp, tiếng Việt đầy đủ." />
+  <meta property="og:title" content="LegitApp" />
+  <meta property="og:description" content="Quản lý ứng dụng macOS với giao diện tiếng Việt" />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:    #DA251D;
+      --red-dk: #b01e17;
+      --bg:     #f5f5f7;
+      --card:   #ffffff;
+      --text:   #1d1d1f;
+      --muted:  #6e6e73;
+      --border: #d2d2d7;
+      --radius: 18px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 52px;
+      background: rgba(245,245,247,.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    nav .brand { font-size: 17px; font-weight: 600; color: var(--text); text-decoration: none; }
+    nav a { font-size: 14px; color: var(--muted); text-decoration: none; margin-left: 24px; }
+    nav a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 100px 5% 80px;
+      background: linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+    }
+    .hero-icon {
+      width: 120px; height: 120px;
+      border-radius: 26px;
+      background: var(--red);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 32px rgba(218,37,29,.25);
+    }
+    .hero-icon svg { width: 64px; height: 64px; fill: white; }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--red); }
+    .hero p {
+      font-size: clamp(17px, 2.5vw, 21px);
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 36px;
+    }
+    .btn-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--red); color: #fff;
+      padding: 14px 28px; border-radius: 980px;
+      font-size: 16px; font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--red-dk); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--card); color: var(--text);
+      border: 1.5px solid var(--border);
+      padding: 14px 28px; border-radius: 980px;
+      font-size: 16px; font-weight: 500;
+      text-decoration: none;
+      transition: border-color .2s, transform .15s;
+    }
+    .btn-secondary:hover { border-color: #999; transform: translateY(-1px); }
+    .version-note { font-size: 13px; color: var(--muted); margin-top: 16px; }
+
+    /* FEATURES */
+    section { padding: 80px 5%; }
+    .section-label {
+      font-size: 13px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700; letter-spacing: -.5px;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 17px; color: var(--muted); max-width: 520px; margin-bottom: 48px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow .2s;
+    }
+    .feature-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+    .feature-icon { font-size: 32px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+    /* CATEGORIES */
+    .categories-section {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .categories-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+    .category-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 980px; padding: 7px 16px;
+      font-size: 14px; color: var(--text);
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px;
+      max-width: 700px;
+    }
+    .service-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 18px;
+    }
+    .service-dot { width: 10px; height: 10px; border-radius: 50%; background: #34c759; flex-shrink: 0; }
+    .service-dot.stopped { background: #8e8e93; }
+    .service-item span { font-size: 14px; font-weight: 500; }
+
+    /* REQUIREMENTS */
+    .req-list { list-style: none; margin-top: 24px; }
+    .req-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 16px; padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .req-list li:last-child { border-bottom: none; }
+    .req-list .check { color: var(--red); font-size: 18px; }
+
+    /* DOWNLOAD CTA */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: white;
+    }
+    .cta-section .section-title { color: white; }
+    .cta-section .section-sub { color: #a1a1a6; }
+    .cta-section .section-label { color: #ff6961; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 32px 5%;
+      font-size: 13px; color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="brand" href="/">🍺 LegitApp</a>
+  <div>
+    <a href="https://github.com/sondecode/legitapp">GitHub</a>
+    <a href="https://github.com/sondecode/legitapp/releases/latest">Tải về</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 3H4C2.9 3 2 3.9 2 5v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14H7v-2h4v2zm0-4H7v-2h4v2zm6 4h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4H7V7h10v2z"/>
+    </svg>
+  </div>
+  <h1>Quản lý ứng dụng macOS<br/><span>dễ dàng với LegitApp</span></h1>
+  <p>Cài đặt, cập nhật và gỡ bỏ hàng nghìn ứng dụng macOS thông qua Homebrew — giao diện tiếng Việt, không cần Terminal.</p>
+  <div class="btn-group">
+    <a class="btn-primary" href="https://github.com/sondecode/legitapp/releases/latest/download/LegitApp.dmg">
+      ⬇ Tải LegitApp miễn phí
+    </a>
+    <a class="btn-secondary" href="https://github.com/sondecode/legitapp">
+      Xem mã nguồn
+    </a>
+  </div>
+  <p class="version-note">Phiên bản mới nhất · macOS 14 Sonoma trở lên · Miễn phí hoàn toàn</p>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <p class="section-label">Tính năng</p>
+  <h2 class="section-title">Mọi thứ bạn cần, trong một app</h2>
+  <p class="section-sub">LegitApp được xây dựng để người dùng Việt dễ dàng tiếp cận hệ sinh thái ứng dụng macOS mã nguồn mở.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🇻🇳</div>
+      <h3>Tiếng Việt đầy đủ</h3>
+      <p>Giao diện hoàn toàn tiếng Việt. Bộ ứng dụng Việt Nam nổi bật: Zalo, Cốc Cốc, CapCut, Telegram...</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <h3>Tìm kiếm thông minh</h3>
+      <p>Tìm trong hơn 6.000 ứng dụng Homebrew Cask chỉ trong tích tắc, có phân loại theo danh mục.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Cập nhật hàng loạt</h3>
+      <p>Xem danh sách ứng dụng cần update và cập nhật tất cả chỉ một cú nhấp. Không cần mở Terminal.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🖥</div>
+      <h3>Icon trên Menu Bar</h3>
+      <p>Theo dõi services đang chạy và ứng dụng cần update ngay trên thanh menu mà không cần mở cửa sổ.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚙️</div>
+      <h3>Quản lý Services</h3>
+      <p>Start/Stop/Restart các Homebrew services như MySQL, Redis, PostgreSQL qua giao diện trực quan.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Bảo mật, mã nguồn mở</h3>
+      <p>Không theo dõi người dùng. Toàn bộ lệnh chạy local qua Homebrew chính thức. Mã nguồn công khai.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories-section">
+  <p class="section-label">Danh mục</p>
+  <h2 class="section-title">Hơn 6.000 ứng dụng, phân loại rõ ràng</h2>
+  <p class="section-sub">Từ công cụ lập trình đến ứng dụng sáng tạo, tất cả được sắp xếp để bạn tìm kiếm dễ dàng hơn.</p>
+  <div class="categories-grid">
+    <span class="category-chip">🇻🇳 Ứng dụng Việt Nam</span>
+    <span class="category-chip">🌐 Trình duyệt</span>
+    <span class="category-chip">💬 Nhắn tin &amp; Video call</span>
+    <span class="category-chip">📊 Năng suất</span>
+    <span class="category-chip">🎨 Sáng tạo</span>
+    <span class="category-chip">🖥 Công cụ lập trình</span>
+    <span class="category-chip">🎮 Gaming</span>
+    <span class="category-chip">🔐 Quản lý mật khẩu</span>
+    <span class="category-chip">☁️ VPN</span>
+    <span class="category-chip">🗜 Tiện ích hệ thống</span>
+    <span class="category-chip">🖱 Menu Bar</span>
+    <span class="category-chip">💻 IDE &amp; Editor</span>
+    <span class="category-chip">📂 Office</span>
+    <span class="category-chip">🎵 Media</span>
+    <span class="category-chip">🐳 Ảo hóa</span>
+    <span class="category-chip">🔧 Bảo trì</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <p class="section-label">Brew Services</p>
+  <h2 class="section-title">Kiểm soát server ngay trong app</h2>
+  <p class="section-sub">Cài đặt và quản lý các database server, web server trực tiếp mà không cần nhớ lệnh Terminal.</p>
+  <div class="services-grid">
+    <div class="service-item"><span class="service-dot"></span><span>mysql</span></div>
+    <div class="service-item"><span class="service-dot"></span><span>redis</span></div>
+    <div class="service-item"><span class="service-dot stopped"></span><span>postgresql@17</span></div>
+    <div class="service-item"><span class="service-dot stopped"></span><span>nginx</span></div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section style="background:white;border-top:1px solid var(--border)">
+  <p class="section-label">Yêu cầu hệ thống</p>
+  <h2 class="section-title">Tương thích rộng rãi</h2>
+  <ul class="req-list">
+    <li><span class="check">✓</span> macOS 14 Sonoma trở lên</li>
+    <li><span class="check">✓</span> Apple Silicon (M1/M2/M3/M4) và Intel</li>
+    <li><span class="check">✓</span> Homebrew sẽ được cài tự động nếu chưa có</li>
+    <li><span class="check">✓</span> Không cần tài khoản, không cần đăng ký</li>
+  </ul>
+</section>
+
+<!-- DOWNLOAD CTA -->
+<section class="cta-section">
+  <p class="section-label">Tải về ngay</p>
+  <h2 class="section-title">Miễn phí · Mã nguồn mở</h2>
+  <p class="section-sub">LegitApp là phần mềm mã nguồn mở, hoàn toàn miễn phí và không có quảng cáo.</p>
+  <div class="btn-group" style="margin-top:32px">
+    <a class="btn-primary" style="background:#fff;color:#1d1d1f"
+       href="https://github.com/sondecode/legitapp/releases/latest/download/LegitApp.dmg">
+      ⬇ Tải file .dmg (macOS)
+    </a>
+    <a class="btn-secondary" style="border-color:#444;color:#e5e5e7"
+       href="https://github.com/sondecode/legitapp">
+      GitHub Repository →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    LegitApp · Xây dựng dựa trên <a href="https://github.com/milanvarady/Applite">Applite</a> ·
+    <a href="https://github.com/sondecode/legitapp">Mã nguồn</a> ·
+    <a href="https://github.com/sondecode/legitapp/releases">Lịch sử phiên bản</a>
+  </p>
+</footer>
+
+</body>
+</html>

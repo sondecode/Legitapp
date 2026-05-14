@@ -143,6 +143,7 @@
     },
     "[Homebrew](https://brew.sh) is a free and open source package manager tool that makes installing third-party applications really easy. Applite uses Homebrew under the hood to download and manage applications." : {
       "comment" : "Manage Homebrew view description",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -181,6 +182,9 @@
           }
         }
       }
+    },
+    "[Homebrew](https://brew.sh) is a free and open source package manager tool that makes installing third-party applications really easy. LegitApp uses Homebrew under the hood to download and manage applications." : {
+
     },
     "**This app is deprecated**\n**Reason:** %@\n**Date:** %@" : {
       "comment" : "App deprecated alert message",
@@ -453,6 +457,7 @@
     },
     "%@ is already installed. If you want to add it to Applite click more options (chevron icon) and press Force Install." : {
       "comment" : "App already installed alert message (parameter: app name)",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -491,6 +496,9 @@
           }
         }
       }
+    },
+    "%@ is already installed. If you want to add it to LegitApp click more options (chevron icon) and press Force Install." : {
+      "comment" : "App already installed alert message (parameter: app name)"
     },
     "%@ successfully installed!" : {
       "comment" : "Successful app install notification",
@@ -740,6 +748,7 @@
     },
     "A new Homebrew installation will be installed into `~/Library/Application Support/Applite`" : {
       "comment" : "Brew installation alert notice",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -778,6 +787,9 @@
           }
         }
       }
+    },
+    "A new Homebrew installation will be installed into `~/Library/Application Support/LegitApp`" : {
+      "comment" : "Brew installation alert notice"
     },
     "A to Z" : {
       "comment" : "Alphabetical sorting option",
@@ -904,6 +916,7 @@
     },
     "After reinstalling, all currently installed apps will be unlinked from Applite. They won't be deleted, but you won't be able to update or uninstall them via Applite." : {
       "comment" : "Brew reinstall warning",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -943,11 +956,15 @@
         }
       }
     },
+    "After reinstalling, all currently installed apps will be unlinked from LegitApp. They won't be deleted, but you won't be able to update or uninstall them via LegitApp." : {
+
+    },
     "All apps up to date" : {
 
     },
     "All currently installed apps will be unlinked from Applite." : {
       "comment" : "Brew reinstallation alert warning",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -986,6 +1003,9 @@
           }
         }
       }
+    },
+    "All currently installed apps will be unlinked from LegitApp." : {
+      "comment" : "Brew reinstallation alert warning"
     },
     "All other app functions will be disabled during the update!" : {
       "comment" : "Brew update notice",
@@ -1565,6 +1585,7 @@
     },
     "Applite's installation" : {
       "comment" : "Brew installation option",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -1770,6 +1791,7 @@
     },
     "Are you sure you want to permanently uninstall Applite?" : {
       "comment" : "Applite uninstall confirmation",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -1808,6 +1830,9 @@
           }
         }
       }
+    },
+    "Are you sure you want to permanently uninstall LegitApp?" : {
+
     },
     "Automatically check for updates" : {
       "comment" : "Applite update option checkmark",
@@ -3129,6 +3154,7 @@
     },
     "Discord" : {
       "comment" : "Applite discord",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -3546,6 +3572,7 @@
     },
     "Export all apps currently installed by Applite to a file." : {
       "comment" : "App Migration export card description",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -3584,6 +3611,9 @@
           }
         }
       }
+    },
+    "Export all apps currently installed by LegitApp to a file." : {
+      "comment" : "App Migration export card description"
     },
     "Export all of your currently installed apps to a file. Import the file to another device to install them all. Useful when setting up a new Mac." : {
       "comment" : "App migration view description",
@@ -4907,6 +4937,7 @@
     },
     "Install separate brew for Applite" : {
       "comment" : "Setup link (keep it short)",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -4945,6 +4976,9 @@
           }
         }
       }
+    },
+    "Install separate brew for LegitApp" : {
+
     },
     "Install Service" : {
       "localizations" : {
@@ -5177,6 +5211,9 @@
       "comment" : "LegitApp app card title"
     },
     "LegitApp couldn't open %@" : {
+
+    },
+    "LegitApp's installation" : {
 
     },
     "Light" : {
@@ -7079,6 +7116,7 @@
       }
     },
     "Sponsor" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -7577,6 +7615,7 @@
     },
     "This will (re)install Applite's Homebrew installation at: `~/Library/Application Support/Applite/homebrew`" : {
       "comment" : "Homebrew reinstallation note",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -7615,6 +7654,9 @@
           }
         }
       }
+    },
+    "This will (re)install LegitApp's Homebrew installation at: `~/Library/Application Support/LegitApp/homebrew`" : {
+
     },
     "This will uninstall all files and cache associated with Applite." : {
       "comment" : "Uninstall applite window description",
@@ -7869,6 +7911,7 @@
     },
     "Uninstall Applite, related files and cache." : {
       "comment" : "Settings Uninstall Applite view description",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -7910,6 +7953,7 @@
     },
     "Uninstall Applite..." : {
       "comment" : "Uninstall Applite button",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -7961,6 +8005,12 @@
     },
     "Uninstall LegitApp" : {
       "comment" : "Uninstall LegitApp window title"
+    },
+    "Uninstall LegitApp, related files and cache." : {
+      "comment" : "Settings Uninstall LegitApp view description"
+    },
+    "Uninstall LegitApp..." : {
+
     },
     "Uninstalling" : {
       "comment" : "Progress text",

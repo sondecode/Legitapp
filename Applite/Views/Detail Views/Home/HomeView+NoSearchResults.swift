@@ -17,7 +17,7 @@ extension HomeView {
                 VStack {
                     HStack {
                         Image(systemName: "magnifyingglass")
-                            .font(.appliteMediumTitle)
+                            .font(.legitMediumTitle)
 
                         Text(
                             "\"\(searchText)\" didn't match any app. Either it's not available in the Homebrew catalog or you misspelled it.",

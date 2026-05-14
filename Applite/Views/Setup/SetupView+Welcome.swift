@@ -13,7 +13,7 @@ extension SetupView {
         var body: some View {
             VStack {
                 Text("Welcome to LegitApp", comment: "Setup welcome page title")
-                    .font(.appliteSmallTitle)
+                    .font(.legitSmallTitle)
                     .padding(.top, 50)
                     .padding(.bottom, 25)
 

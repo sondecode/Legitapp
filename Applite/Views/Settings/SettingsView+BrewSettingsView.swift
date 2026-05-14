@@ -118,7 +118,7 @@ extension SettingsView {
                     relaunchNeeded = false
                     
                     Task.detached {
-                        try? await Shell.runAsync("/usr/bin/osascript -e 'tell application \"Applite\" to quit' && sleep 3 && open \"\(Bundle.main.bundlePath)\"")
+                        try? await Shell.runAsync("/usr/bin/osascript -e 'tell application \"LegitApp\" to quit' && sleep 3 && open \"\(Bundle.main.bundlePath)\"")
                     }
                 } label: {
                     Label("Relaunch", systemImage: "arrow.trianglehead.clockwise.rotate.90")

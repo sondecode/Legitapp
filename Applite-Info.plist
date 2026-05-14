@@ -3,8 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>SUFeedURL</key>
-	<string>https://milanvarady.github.io/Applite/appcast.xml</string>
+	<string>https://sondecode.github.io/legitapp/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>f86A7o96S0KaqAbZ0lKfk7CHCATKkpmRQIiBaSx9J44=</string>
+	<key>LegitAppCategoriesURL</key>
+	<string>https://raw.githubusercontent.com/sondecode/legitapp/main/Applite/Resources/categories.json</string>
 </dict>
 </plist>

@@ -22,7 +22,7 @@ extension SettingsView {
                 .tint(.red)
                 .controlSize(.large)
 
-                Text("Uninstall Applite, related files and cache.", comment: "Settings Uninstall Applite view description")
+                Text("Uninstall LegitApp, related files and cache.", comment: "Settings Uninstall LegitApp view description")
             }
             .padding()
         }

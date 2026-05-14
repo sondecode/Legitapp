@@ -55,7 +55,7 @@ extension CaskManager {
                     // Already installed
                 case _ where completeOutput.contains("It seems there is already an App"):
                     alertMessage = String(
-                        localized: "\(cask.info.name) is already installed. If you want to add it to Applite click more options (chevron icon) and press Force Install.",
+                        localized: "\(cask.info.name) is already installed. If you want to add it to LegitApp click more options (chevron icon) and press Force Install.",
                         comment: "App already installed alert message (parameter: app name)"
                     )
                     // Network error

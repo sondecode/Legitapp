@@ -1,8 +1,58 @@
-[![License](https://img.shields.io/github/license/milanvarady/Applite)](LICENSE.txt)
-[![Latest release](https://img.shields.io/github/v/release/milanvarady/Applite)](https://github.com/milanvarady/Applite/releases/latest)
-[![All releases](https://img.shields.io/github/downloads/milanvarady/Applite/total)](https://github.com/milanvarady/Applite/releases)
-[![Contributors](https://img.shields.io/github/contributors/milanvarady/Applite)](https://github.com/milanvarady/Applite/graphs/contributors)
-![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/milanvarady/Applite/latest)
+[![License](https://img.shields.io/github/license/sondecode/legitapp)](LICENSE.txt)
+[![Latest release](https://img.shields.io/github/v/release/sondecode/legitapp)](https://github.com/sondecode/legitapp/releases/latest)
+[![All releases](https://img.shields.io/github/downloads/sondecode/legitapp/total)](https://github.com/sondecode/legitapp/releases)
+
+# LegitApp
+
+Ứng dụng quản lý Homebrew Cask trên macOS với giao diện tiếng Việt
+
+## Mục lục
+
+1. [Tính năng](#tính-năng)
+2. [Giới thiệu](#giới-thiệu)
+3. [Tải về](#tải-về)
+4. [Packages sử dụng](#packages-sử-dụng)
+5. [Giấy phép](#giấy-phép)
+
+## Tính năng
+
+- Cài đặt, cập nhật và gỡ bỏ ứng dụng chỉ một cú nhấp
+- Giao diện tiếng Việt đầy đủ
+- Danh mục ứng dụng Việt Nam nổi bật (Zalo, Cốc Cốc, CapCut...)
+- Quản lý Homebrew Services (start/stop/restart)
+- Theo dõi qua Menu Bar
+- Miễn phí, mã nguồn mở, không quảng cáo
+- Hỗ trợ system proxy (HTTP, HTTPS, SOCKS5)
+
+## Giới thiệu
+
+LegitApp là ứng dụng macOS miễn phí, mã nguồn mở giúp cài đặt và quản lý hơn 6.000 ứng dụng thông qua [Homebrew](https://brew.sh/). Xây dựng bằng [Swift](https://developer.apple.com/swift/) và [SwiftUI](https://developer.apple.com/xcode/swiftui/), được tối ưu cho người dùng Việt Nam.
+
+LegitApp được fork từ [Applite](https://github.com/milanvarady/Applite) và mở rộng với các tính năng dành riêng cho thị trường Việt Nam.
+
+## Tải về
+
+[Download DMG](https://github.com/sondecode/legitapp/releases/latest/download/LegitApp.dmg)
+
+Yêu cầu tối thiểu: **macOS 14 Sonoma+**
+
+## Packages sử dụng
+
+- [Homebrew](https://github.com/homebrew)
+- [Sparkle](https://github.com/sparkle-project/Sparkle) - cập nhật ứng dụng
+- [Kingfisher](https://github.com/onevcat/Kingfisher) - tải và cache icon ứng dụng
+- [ButtonKit](https://github.com/Dean151/ButtonKit), Thomas Durand
+- [DebouncedOnChange](https://github.com/Tunous/DebouncedOnChange), Łukasz Rutkowski
+- [SwiftUI-Shimmer](https://github.com/markiv/SwiftUI-Shimmer), Vikram Kriplaney
+- [CircularProgressSwiftUI](https://github.com/ArnavMotwani/CircularProgressSwiftUI), Arnav Motwani
+- [Appcasks](https://github.com/App-Fair/appcasks/) - icon ứng dụng
+
+## Giấy phép
+
+LegitApp được cấp phép theo [MIT](https://choosealicense.com/licenses/mit/) License. Xem [LICENSE](LICENSE.txt) để biết thêm chi tiết.
+
+Dự án này được xây dựng dựa trên [Applite](https://github.com/milanvarady/Applite) bởi Milán Várady.
+
 
 
 # Applite

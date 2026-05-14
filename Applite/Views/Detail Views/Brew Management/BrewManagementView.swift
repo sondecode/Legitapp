@@ -46,7 +46,7 @@ struct BrewManagementView: View {
     var titleAndDescription: some View {
         VStack(alignment: .leading) {
             Text("Manage Homebrew", comment: "Manage Homebrew view title")
-                .font(.appliteMediumTitle)
+                .font(.legitMediumTitle)
                 .padding(.bottom, 2)
 
             Text(

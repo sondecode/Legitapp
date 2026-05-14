@@ -29,7 +29,7 @@ struct AppGridView: View {
 
                 ForEach(casks) { cask in
                     // Filter out self
-                    if cask.info.token != "applite" {
+                    if cask.info.token != "legitapp" {
                         AppView(cask: cask, role: appRole)
                     }
                 }

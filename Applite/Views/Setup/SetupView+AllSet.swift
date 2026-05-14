@@ -14,7 +14,7 @@ extension SetupView {
 
         var body: some View {
             Text("All set!", comment: "Setup done message")
-                .font(.appliteLargeTitle)
+                .font(.legitLargeTitle)
                 .padding(.top, 40)
 
             Button("Start Using LegitApp") {
