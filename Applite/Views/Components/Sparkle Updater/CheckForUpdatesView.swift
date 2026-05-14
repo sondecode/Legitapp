@@ -14,6 +14,7 @@ import Combine
 @MainActor
 final class CheckForUpdatesViewModel: ObservableObject {
     @Published var canCheckForUpdates = false
+    private var cancellables = Set<AnyCancellable>()
 
     init(updater: SPUUpdater) {
         updater.publisher(for: \.canCheckForUpdates)
@@ -23,28 +24,28 @@ final class CheckForUpdatesViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-
-    private var cancellables = Set<AnyCancellable>()
 }
 
 /// A button that opens sparkle updater and checks for available updates
+@MainActor
 struct CheckForUpdatesView<T: View>: View {
-    @ObservedObject private var checkForUpdatesViewModel: CheckForUpdatesViewModel
+    @StateObject private var checkForUpdatesViewModel: CheckForUpdatesViewModel
     private let updater: SPUUpdater
-    let label: ()->T
-    
-    init(updater: SPUUpdater, @ViewBuilder label: @escaping ()->T) {
+    let label: () -> T
+
+    init(updater: SPUUpdater, @ViewBuilder label: @escaping () -> T) {
         self.updater = updater
-        
-        // Create our view model for our CheckForUpdatesView
-        self.checkForUpdatesViewModel = CheckForUpdatesViewModel(updater: updater)
-        
+        self._checkForUpdatesViewModel = StateObject(wrappedValue: CheckForUpdatesViewModel(updater: updater))
         self.label = label
     }
-    
+
     var body: some View {
-        Button(action: updater.checkForUpdates, label: label)
-            .disabled(!checkForUpdatesViewModel.canCheckForUpdates)
+        Button {
+            updater.checkForUpdates()
+        } label: {
+            label()
+        }
+        .disabled(!checkForUpdatesViewModel.canCheckForUpdates)
     }
 }
 

@@ -5158,6 +5158,15 @@
         }
       }
     },
+    "Language" : {
+      "comment" : "Language settings title"
+    },
+    "Language:" : {
+
+    },
+    "Later" : {
+
+    },
     "LegitApp" : {
       "comment" : "LegitApp app card title"
     },
@@ -6051,6 +6060,9 @@
         }
       }
     },
+    "Please restart the app to apply the language change." : {
+
+    },
     "Preferred proxy protocol" : {
       "comment" : "Proxy protocol picker",
       "localizations" : {
@@ -6639,6 +6651,12 @@
           }
         }
       }
+    },
+    "Restart Now" : {
+
+    },
+    "Restart Required" : {
+
     },
     "Retry" : {
       "comment" : "Retry button title",

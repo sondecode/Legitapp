@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppKit
 
 extension SettingsView {
     struct GeneralSettingsView: View {
@@ -16,6 +17,19 @@ extension SettingsView {
 
         /// Needed for a workaround for changing the color scheme
         @State var fixingColor = false
+
+        @State private var selectedLanguage: String = {
+            let langs = UserDefaults.standard.stringArray(forKey: "AppleLanguages") ?? []
+            let code = langs.first?.prefix(2).description ?? ""
+            return ["en", "vi", "fr"].contains(code) ? code : "en"
+        }()
+        @State private var showRestartAlert = false
+
+        private let supportedLanguages: [(code: String, name: String)] = [
+            ("en", "English"),
+            ("vi", "Tiếng Việt"),
+            ("fr", "Français"),
+        ]
 
         var body: some View {
             VStack(alignment: .leading) {
@@ -28,6 +42,33 @@ extension SettingsView {
                     }
                 }
                 .pickerStyle(.segmented)
+
+                Divider()
+                    .padding(.vertical)
+
+                Text("Language", comment: "Language settings title")
+                    .bold()
+
+                Picker("Language:", selection: $selectedLanguage) {
+                    ForEach(supportedLanguages, id: \.code) { lang in
+                        Text(lang.name).tag(lang.code)
+                    }
+                }
+                .onChange(of: selectedLanguage) { newValue in
+                    UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
+                    UserDefaults.standard.synchronize()
+                    showRestartAlert = true
+                }
+                .alert("Restart Required", isPresented: $showRestartAlert) {
+                    Button("Restart Now") {
+                        let url = Bundle.main.bundleURL
+                        NSWorkspace.shared.open(url)
+                        NSApplication.shared.terminate(nil)
+                    }
+                    Button("Later", role: .cancel) { }
+                } message: {
+                    Text("Please restart the app to apply the language change.")
+                }
 
                 Divider()
                     .padding(.vertical)
