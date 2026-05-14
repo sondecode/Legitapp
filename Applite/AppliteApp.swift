@@ -11,7 +11,7 @@ import Sparkle
 import Kingfisher
 
 @main
-struct AppliteApp: App {
+struct LegitApp: App {
     @NSApplicationDelegateAdaptor(ApplicationDelegate.self) var appDelegate
 
     @StateObject var caskManager = CaskManager()
@@ -64,7 +64,7 @@ struct AppliteApp: App {
         }
         .windowResizability(.contentSize)
         
-        Window("Uninstall Applite", id: "uninstall-self") {
+        Window("Uninstall LegitApp", id: "uninstall-self") {
             UninstallSelfView()
                 .padding()
                 .preferredColorScheme(selectedColorScheme)

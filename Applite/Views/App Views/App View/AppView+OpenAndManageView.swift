@@ -33,7 +33,7 @@ extension AppView {
                 showAppNotFoundAlert = true
             }
             .asyncButtonStyle(.none)
-            .alert("Applite couldn't open \(cask.info.name)", isPresented: $showAppNotFoundAlert) {}
+            .alert("LegitApp couldn't open \(cask.info.name)", isPresented: $showAppNotFoundAlert) {}
 
             if deleteButton {
                 UninstallButton(cask: cask)

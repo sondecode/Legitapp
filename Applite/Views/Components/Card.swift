@@ -22,7 +22,7 @@ struct Card<Content: View>: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity) // Take available space
             .padding(padding)
             .background(.regularMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             .shadow(radius: 3)
     }
 }

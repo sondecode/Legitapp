@@ -121,6 +121,12 @@
             "value" : "%@は、どのアプリケーションにも一致しません\nHomebrewで入手出来ないかスペルが間違っています"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"%@\" không khớp với ứng dụng nào. Ứng dụng này có thể không có trong danh mục Homebrew hoặc bạn nhập sai tên."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -154,6 +160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "[Homebrew](https://brew.sh)は、サードパーティアプリケーションのインストールを簡単にする無料のオープンソースパッケージ管理ツールです。Appliteは内部でHomebrewを使用してアプリケーションをダウンロードして管理します"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "[Homebrew](https://brew.sh) là công cụ quản lý gói miễn phí và mã nguồn mở, giúp cài đặt ứng dụng bên thứ ba cực kỳ dễ dàng. LegitApp sử dụng Homebrew để tải và quản lý ứng dụng."
           }
         },
         "zh-Hans" : {
@@ -197,6 +209,12 @@
             "value" : "**このアプリは非推奨です**\n**理由:** %1$@\n**日付:** %2$@"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Ứng dụng này đã lỗi thời**\n**Lý do:** %@\n**Ngày:** %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -238,6 +256,12 @@
             "value" : "**このアプリは無効です**\n**理由:** %1$@\n**日付:** %2$@"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Ứng dụng này đã bị vô hiệu hoá**\n**Lý do:** %@\n**Ngày:** %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -271,6 +295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**ヒント：** Brewfile からアプリをインポートすることもできます。ただし、casks のみがインストールされ、formulae や taps などの他の項目はスキップされます。"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Mẹo:** Bạn cũng có thể nhập ứng dụng từ Brewfile. Tuy nhiên, chỉ các cask sẽ được cài đặt; formulae và tap sẽ bị bỏ qua."
           }
         },
         "zh-Hans" : {
@@ -308,6 +338,12 @@
             "value" : "**警告**: HomebrewキャッシュはそれぞれのHomebrewで共有されます\nキャッシュを削除すると全てのインストールキャッシュが削除されます"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Cảnh báo**: Bộ nhớ đệm Homebrew được dùng chung giữa các bản cài đặt. Xoá bộ nhớ đệm sẽ ảnh hưởng đến tất cả!"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -323,7 +359,15 @@
       }
     },
     "**Warning**: This will run the Homebrew uninstaller and remove Homebrew from all known locations and all packages installed. Administrator privileges may be required." : {
-      "comment" : "Uninstall Homebrew warning"
+      "comment" : "Uninstall Homebrew warning",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Cảnh báo**: Thao tác này sẽ chạy trình gỡ cài đặt Homebrew và xoá Homebrew khỏi tất cả vị trí đã biết cùng các gói đã cài đặt. Có thể cần quyền quản trị viên."
+          }
+        }
+      }
     },
     "/path/to/brew" : {
       "comment" : "Example brew path",
@@ -344,6 +388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "/path/to/brew"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/đường/dẫn/brew"
           }
         },
         "zh-Hans" : {
@@ -381,6 +431,12 @@
             "value" : "/path/to/dir"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/đường/dẫn/thư-mục"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -414,6 +470,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@はすでにインストールされています\nApplite に追加する場合は\nVアイコンをクリックし強制インストールを押します"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ đã được cài đặt. Để thêm vào LegitApp, nhấp vào tùy chọn thêm (biểu tượng mũi tên) và chọn Cài đặt bắt buộc."
           }
         },
         "zh-Hans" : {
@@ -451,6 +513,12 @@
             "value" : "%@は正常にインストールされました"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ đã được cài đặt thành công!"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -484,6 +552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@の再インストールに成功しました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ đã được cài đặt lại thành công"
           }
         },
         "zh-Hans" : {
@@ -521,6 +595,12 @@
             "value" : "%@は正常にアンインストールされました"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ đã được gỡ cài đặt thành công"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -554,6 +634,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@は正常に更新されました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ đã được cập nhật thành công"
           }
         },
         "zh-Hans" : {
@@ -591,6 +677,12 @@
             "value" : "3日ごと"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 ngày"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -624,6 +716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brew のインストールが検出されました："
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã phát hiện bản cài đặt brew tại:"
           }
         },
         "zh-Hans" : {
@@ -661,6 +759,12 @@
             "value" : "新しいHomebrewのインストール先は `~/Library/Application Support/Applite`にインストールされます"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một bản cài đặt Homebrew mới sẽ được cài vào `~/Library/Application Support/LegitApp`"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -694,6 +798,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アルファベット順"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A đến Z"
           }
         },
         "zh-Hans" : {
@@ -731,6 +841,12 @@
             "value" : "アクション"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thao tác"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -764,6 +880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アクティブなタスク"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác vụ đang chạy"
           }
         },
         "zh-Hans" : {
@@ -801,6 +923,12 @@
             "value" : "再インストール後、現在インストールされている全てのアプリは Appliteからリンク解除されます\nこれらは削除されませんが、Applite経由で更新又はアンインストールする事は出来ません"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sau khi cài đặt lại, tất cả ứng dụng đã cài sẽ được gỡ liên kết khỏi LegitApp. Chúng sẽ không bị xoá, nhưng bạn sẽ không thể cập nhật hoặc gỡ cài đặt qua LegitApp."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -834,6 +962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在インストールされている全てのアプリケーションは Appliteからリンク解除されます"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tất cả ứng dụng đã cài đặt sẽ được gỡ liên kết khỏi LegitApp."
           }
         },
         "zh-Hans" : {
@@ -871,6 +1005,12 @@
             "value" : "アップデート中はアプリの他の機能が全て無効になります"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tất cả chức năng khác sẽ bị vô hiệu hoá trong quá trình cập nhật!"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -904,6 +1044,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "全ての準備完了"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoàn tất!"
           }
         },
         "zh-Hans" : {
@@ -941,6 +1087,12 @@
             "value" : "アプリケーションカタログ"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh mục ứng dụng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -974,6 +1126,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用上の注意"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng có lưu ý"
           }
         },
         "zh-Hans" : {
@@ -1011,6 +1169,12 @@
             "value" : "アプリは非推奨です"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng đã lỗi thời"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1044,6 +1208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリは無効です"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng đã bị vô hiệu hoá"
           }
         },
         "zh-Hans" : {
@@ -1081,6 +1251,12 @@
             "value" : "アプリ起動時"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi chạy ứng dụng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1114,6 +1290,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリ移行"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di chuyển ứng dụng"
           }
         },
         "zh-Hans" : {
@@ -1151,6 +1333,12 @@
             "value" : "アプリケーションディレクトリ"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thư mục ứng dụng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1184,6 +1372,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "外観"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giao diện"
           }
         },
         "zh-Hans" : {
@@ -1221,6 +1415,12 @@
             "value" : "Apple Silicon Mac"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac Apple Silicon"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1237,6 +1437,7 @@
     },
     "Applite" : {
       "comment" : "Applite app card title",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -1256,6 +1457,12 @@
             "value" : "Applite"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LegitApp"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1272,6 +1479,7 @@
     },
     "Applite couldn't open %@" : {
       "comment" : "App couldn't be opened alert",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -1289,6 +1497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Applite は %@ を開けませんでした"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LegitApp không thể mở %@"
           }
         },
         "zh-Hans" : {
@@ -1326,6 +1540,12 @@
             "value" : "Appliteはシステムネットワークプロキシを使用しますが、使用できるプロトコルは1つだけです\n(HTTP、HTTPS、SOCKS5)お好みの方法を選択して下さい"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LegitApp sử dụng proxy mạng hệ thống, nhưng chỉ hỗ trợ một giao thức (HTTP, HTTPS hoặc SOCKS5). Vui lòng chọn phương thức ưu tiên."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1359,6 +1579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Applite のインストール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bản cài đặt của LegitApp"
           }
         },
         "zh-Hans" : {
@@ -1396,6 +1622,12 @@
             "value" : "インストールされているアプリケーションの数"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng đã cài đặt"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1429,6 +1661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ダウンロードの少ないアプリケーションは非表示になります。このフィルターを無効にする事を検討して下さい"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các ứng dụng ít lượt tải đang bị ẩn, hãy cân nhắc tắt bộ lọc này"
           }
         },
         "zh-Hans" : {
@@ -1466,6 +1704,12 @@
             "value" : "Homebrewを%@installしてもよろしいですか?"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn có chắc muốn %@cài đặt Homebrew không?"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1499,6 +1743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@の強制インストールをしてよろしいですか？ これにより現在のインストール先が置き換えられます"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn có chắc muốn cài đặt bắt buộc %@? Thao tác này sẽ ghi đè bản cài đặt hiện tại!"
           }
         },
         "zh-Hans" : {
@@ -1536,6 +1786,12 @@
             "value" : "Appliteを完全にアンインストールしてもよろしいですか?"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn có chắc muốn gỡ cài đặt vĩnh viễn LegitApp không?"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1569,6 +1825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アップデートを自動的にチェックする"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự động kiểm tra cập nhật"
           }
         },
         "zh-Hans" : {
@@ -1606,6 +1868,12 @@
             "value" : "アップデートを自動的にダウンロードする"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự động tải bản cập nhật"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1639,6 +1907,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最適な一致"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phù hợp nhất"
           }
         },
         "zh-Hans" : {
@@ -1711,6 +1985,12 @@
             "value" : "Brewの実行可能パス"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đường dẫn thực thi Brew"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1744,6 +2024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brew インストールが検出されました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã phát hiện bản cài đặt Brew"
           }
         },
         "zh-Hans" : {
@@ -1781,6 +2067,12 @@
             "value" : "Brew パスが無効です"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đường dẫn Brew không hợp lệ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1816,6 +2108,12 @@
             "value" : "Brewのパスが見つかりません"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đường dẫn Brew bị hỏng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1849,6 +2147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ブラウズ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duyệt"
           }
         },
         "zh-Hans" : {
@@ -1887,6 +2191,12 @@
             "value" : "厳選された素晴らしいアプリのリストをご覧下さい"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duyệt qua danh sách ứng dụng tuyển chọn."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1921,6 +2231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ブラウザ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trình duyệt"
           }
         },
         "zh-Hans" : {
@@ -1958,6 +2274,12 @@
             "value" : "Apple Gatekeeper のチェックをバイパスします。未登録の開発者からのアプリの場合に役立ちます。**自己責任で使用してください！**"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ qua kiểm tra Apple Gatekeeper, hữu ích khi ứng dụng từ nhà phát triển chưa đăng ký. **Dùng theo rủi ro của bạn!**"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1991,6 +2313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "キャンセル"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huỷ"
           }
         },
         "zh-Hans" : {
@@ -2028,6 +2356,12 @@
             "value" : "Cask 情報"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin Cask"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2061,6 +2395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カテゴリー"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh mục"
           }
         },
         "zh-Hans" : {
@@ -2098,6 +2438,12 @@
             "value" : "アップデートをチェック..."
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiểm tra cập nhật..."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2131,6 +2477,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "テーマ："
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giao diện màu sắc:"
           }
         },
         "zh-Hans" : {
@@ -2169,6 +2521,12 @@
             "value" : "コミュニケーション"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên lạc"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2202,6 +2560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "続く"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục"
           }
         },
         "zh-Hans" : {
@@ -2239,6 +2603,12 @@
             "value" : "検出されたインストールを続けて使用するか、以下の他のオプションを選択してください。"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục sử dụng bản cài đặt đã phát hiện hoặc chọn tuỳ chọn khác bên dưới."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2272,6 +2642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリケーションをダウンロード出来ません。インターネット接続が無いかホストにアクセス出来ません"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải ứng dụng. Không có kết nối internet hoặc máy chủ không thể truy cập."
           }
         },
         "zh-Hans" : {
@@ -2309,6 +2685,12 @@
             "value" : "カタログを読み込めませんでした"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải danh mục ứng dụng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2342,6 +2724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カテゴリを読み込めませんでした"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải danh mục"
           }
         },
         "zh-Hans" : {
@@ -2378,6 +2766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "作成ツール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Công cụ sáng tạo"
           }
         },
         "zh-Hans" : {
@@ -2421,6 +2815,12 @@
             "value" : "現在のアプリのバージョン : %1$@ (%2$@)"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phiên bản hiện tại: %@ (%@)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2454,6 +2854,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homebrewの現在のパスが無効です"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đường dẫn brew đang chọn không hợp lệ"
           }
         },
         "zh-Hans" : {
@@ -2491,6 +2897,12 @@
             "value" : "カスタム"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuỳ chỉnh"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2526,6 +2938,12 @@
             "value" : "Brewのカスタムパス"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đường dẫn brew tuỳ chỉnh"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2559,6 +2977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カスタムインストールディレクトリ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thư mục cài đặt tuỳ chỉnh"
           }
         },
         "zh-Hans" : {
@@ -2597,6 +3021,12 @@
             "value" : "ダーク"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tối"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2630,6 +3060,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homebrewのキャッシュを削除する"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xoá bộ nhớ đệm Homebrew"
           }
         },
         "zh-Hans" : {
@@ -2666,6 +3102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開発ツール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Công cụ lập trình"
           }
         },
         "zh-Hans" : {
@@ -2739,6 +3181,12 @@
             "value" : "アプリを探す"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khám phá"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2774,6 +3222,12 @@
             "value" : "強制ダウンロード"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vẫn tải về"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2807,6 +3261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリを `/Applications` ではなくカスタムディレクトリにダウンロード"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải ứng dụng vào thư mục tuỳ chỉnh thay vì `/Applications`"
           }
         },
         "zh-Hans" : {
@@ -2845,6 +3305,12 @@
             "value" : "アプリを簡単にダウンロード"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải ứng dụng dễ dàng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2878,6 +3344,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ワンクリックでサードパーティのアプリをダウンロード出来ます\nアプリケーションフォルダーにドラッグする必要はありません"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải ứng dụng bên thứ ba chỉ với một cú nhấp. Không cần \"Kéo vào thư mục Applications\" nữa."
           }
         },
         "zh-Hans" : {
@@ -2915,6 +3387,12 @@
             "value" : "有効"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã bật"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2948,6 +3426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "「Greedy アップグレード」を有効にすると、組み込みの更新メカニズムを持ち、独自の更新を処理するアプリも含め、すべての古いアプリが一覧表示されます。"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bật nâng cấp toàn diện sẽ liệt kê tất cả ứng dụng đã lỗi thời, kể cả những ứng dụng có cơ chế cập nhật tích hợp."
           }
         },
         "zh-Hans" : {
@@ -2985,6 +3469,12 @@
             "value" : "エラー"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lỗi"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2995,6 +3485,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "錯誤"
+          }
+        }
+      }
+    },
+    "Error installing service" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lỗi cài đặt dịch vụ"
           }
         }
       }
@@ -3018,6 +3519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "エクスポート"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xuất"
           }
         },
         "zh-Hans" : {
@@ -3055,6 +3562,12 @@
             "value" : "Applite で現在インストールされているすべてのアプリをファイルにエクスポートします。"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xuất tất cả ứng dụng đang được cài đặt bởi LegitApp ra file."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3088,6 +3601,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在インストールされているすべてのアプリをファイルにエクスポートします。そのファイルを別のデバイスにインポートして、すべてのアプリをインストールできます。新しい Mac をセットアップする際に便利です。"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xuất tất cả ứng dụng đang cài đặt ra file. Nhập vào thiết bị khác để cài đặt tất cả. Hữu ích khi thiết lập Mac mới."
           }
         },
         "zh-Hans" : {
@@ -3125,6 +3644,12 @@
             "value" : "アプリをファイルにエクスポート"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xuất ứng dụng ra file"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3158,6 +3683,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "エクスポートに失敗しました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xuất thất bại"
           }
         },
         "zh-Hans" : {
@@ -3195,6 +3726,12 @@
             "value" : "cask 情報の収集に失敗しました"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể lấy thông tin cask"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3228,6 +3765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "インポートに失敗しました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập thất bại"
           }
         },
         "zh-Hans" : {
@@ -3265,6 +3808,12 @@
             "value" : "%@ のインストールに失敗しました"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt %@ thất bại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3298,6 +3847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "更新の更新に失敗しました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể làm mới bản cập nhật"
           }
         },
         "zh-Hans" : {
@@ -3335,6 +3890,12 @@
             "value" : "%@の再インストールに失敗しました"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt lại %@ thất bại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3368,6 +3929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アンインストールに失敗しました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt thất bại"
           }
         },
         "zh-Hans" : {
@@ -3405,6 +3972,12 @@
             "value" : "%@ のアンインストールに失敗しました"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt %@ thất bại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3438,6 +4011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@を更新出来ませんでした"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật %@ thất bại"
           }
         },
         "zh-Hans" : {
@@ -3475,6 +4054,12 @@
             "value" : "カタログの取得頻度："
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải danh mục ứng dụng mỗi:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3508,6 +4093,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "強制インストール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt bắt buộc"
           }
         },
         "zh-Hans" : {
@@ -3545,6 +4136,12 @@
             "value" : "一般"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chung"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3578,6 +4175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "情報を取得"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem thông tin"
           }
         },
         "zh-Hans" : {
@@ -3650,6 +4253,12 @@
             "value" : "Greedy アップグレード"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nâng cấp toàn diện"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3683,6 +4292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ダウンロード数が少ないアプリを非表示にする"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ẩn ứng dụng ít lượt tải"
           }
         },
         "zh-Hans" : {
@@ -3720,6 +4335,12 @@
             "value" : "無効なアプリを非表示にする"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ẩn ứng dụng bị vô hiệu hoá"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3750,6 +4371,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Homebrew"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homebrew"
@@ -3790,6 +4417,12 @@
             "value" : "Homebrew インストール"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt Homebrew"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3823,6 +4456,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homebrew バージョン"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phiên bản Homebrew"
           }
         },
         "zh-Hans" : {
@@ -3860,6 +4499,12 @@
             "value" : "ホームページ"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang chủ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3895,6 +4540,12 @@
             "value" : "既に Brew をインストール済み"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tôi đã cài đặt brew rồi"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3926,6 +4577,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IDEs"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "IDEs"
@@ -3966,6 +4623,12 @@
             "value" : "インポート"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3999,6 +4662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリをインポート"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập ứng dụng"
           }
         },
         "zh-Hans" : {
@@ -4036,6 +4705,12 @@
             "value" : "インポートされたファイルに有効なアプリが含まれていません"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File nhập không chứa ứng dụng hợp lệ nào"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4069,6 +4744,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "進行中..."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang xử lý..."
           }
         },
         "zh-Hans" : {
@@ -4106,6 +4787,12 @@
             "value" : "Tap からの Cask を含める"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bao gồm Cask từ Tap"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4141,6 +4828,12 @@
             "value" : "情報"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4154,6 +4847,19 @@
           }
         }
       }
+    },
+    "Install & Start" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt & Bắt đầu"
+          }
+        }
+      }
+    },
+    "Install a service using Homebrew to manage it here." : {
+
     },
     "Install Separate Brew" : {
       "comment" : "Brew Management button",
@@ -4174,6 +4880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "別のHomebrewをインストールする"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt Brew riêng biệt"
           }
         },
         "zh-Hans" : {
@@ -4211,6 +4923,12 @@
             "value" : "Applite 用に別の brew をインストール"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt brew riêng biệt cho LegitApp"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4221,6 +4939,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "為 Applite 安裝獨立的 Brew"
+          }
+        }
+      }
+    },
+    "Install Service" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài dịch vụ"
           }
         }
       }
@@ -4244,6 +4972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "インストールに失敗しました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt thất bại"
           }
         },
         "zh-Hans" : {
@@ -4281,6 +5015,12 @@
             "value" : "インストール済み"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã cài đặt"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4314,6 +5054,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "インストール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang cài đặt"
           }
         },
         "zh-Hans" : {
@@ -4351,6 +5097,12 @@
             "value" : "依存関係のインストール"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang cài đặt phần phụ thuộc"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4386,6 +5138,12 @@
             "value" : "Intel Mac"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac Intel"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4399,6 +5157,12 @@
           }
         }
       }
+    },
+    "LegitApp" : {
+      "comment" : "LegitApp app card title"
+    },
+    "LegitApp couldn't open %@" : {
+
     },
     "Light" : {
       "comment" : "Color mode",
@@ -4422,6 +5186,12 @@
             "value" : "ライト"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sáng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4435,6 +5205,9 @@
           }
         }
       }
+    },
+    "Loading services…" : {
+
     },
     "Maintenance" : {
       "comment" : "App category",
@@ -4456,6 +5229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メンテナンス"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bảo trì"
           }
         },
         "zh-Hans" : {
@@ -4494,6 +5273,12 @@
             "value" : "アプリを管理"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quản lý ứng dụng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4527,6 +5312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homebrewの管理"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quản lý Homebrew"
           }
         },
         "zh-Hans" : {
@@ -4565,6 +5356,12 @@
             "value" : "メディア"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giải trí"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4599,6 +5396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニューバー"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thanh Menu"
           }
         },
         "zh-Hans" : {
@@ -4636,6 +5439,12 @@
             "value" : "ミラー"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy chủ phản chiếu"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4671,6 +5480,12 @@
             "value" : "ミラー"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy chủ phản chiếu"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4704,6 +5519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "毎月"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tháng"
           }
         },
         "zh-Hans" : {
@@ -4742,6 +5563,12 @@
             "value" : "最もダウンロードされたCask(デフォルト)"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhiều lượt tải nhất (mặc định)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4775,6 +5602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アクティブなタスクはありません"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có tác vụ đang chạy"
           }
         },
         "zh-Hans" : {
@@ -4812,6 +5645,12 @@
             "value" : "ホームページが見つかりませんでした"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không tìm thấy trang chủ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4847,6 +5686,12 @@
             "value" : "No Quarantine"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ qua kiểm dịch"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4860,6 +5705,20 @@
           }
         }
       }
+    },
+    "No services found" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không tìm thấy dịch vụ nào"
+          }
+        }
+      }
+    },
+    "No Services Found" : {
+
     },
     "No Updates Available" : {
       "comment" : "Update view no updates available",
@@ -4880,6 +5739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "利用可能なアップデートはありません"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có bản cập nhật"
           }
         },
         "zh-Hans" : {
@@ -4918,6 +5783,12 @@
             "value" : "備考"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghi chú"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4951,6 +5822,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "通知"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông báo"
           }
         },
         "zh-Hans" : {
@@ -4989,6 +5866,12 @@
             "value" : "オフィスツール"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Công cụ văn phòng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5019,6 +5902,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -5059,6 +5948,12 @@
             "value" : "開く"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5092,6 +5987,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "その他のオプション"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuỳ chọn khác"
           }
         },
         "zh-Hans" : {
@@ -5130,6 +6031,12 @@
             "value" : "パスワードマネージャー"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quản lý mật khẩu"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5165,6 +6072,12 @@
             "value" : "優先プロキシプロトコル"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giao thức proxy ưu tiên"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5198,6 +6111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "プリセット"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt sẵn"
           }
         },
         "zh-Hans" : {
@@ -5236,6 +6155,12 @@
             "value" : "生産性"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Năng suất"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5269,6 +6194,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "プロパティ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thuộc tính"
           }
         },
         "zh-Hans" : {
@@ -5306,6 +6237,12 @@
             "value" : "Homebrewの実行パスを指定して下さい"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cung cấp đường dẫn thực thi Brew"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5341,6 +6278,12 @@
             "value" : "プロキシ"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proxy"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5354,6 +6297,9 @@
           }
         }
       }
+    },
+    "Quản lý ứng dụng macOS dễ dàng" : {
+      "comment" : "Hero banner subtitle"
     },
     "Quit" : {
       "comment" : "Quit Applite button",
@@ -5374,6 +6320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "終了"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thoát"
           }
         },
         "zh-Hans" : {
@@ -5411,6 +6363,12 @@
             "value" : "更新"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Làm mới"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5444,6 +6402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "再インストール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt lại"
           }
         },
         "zh-Hans" : {
@@ -5481,6 +6445,12 @@
             "value" : "再インストールに失敗しました"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt lại thất bại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5514,6 +6484,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homebrewを再インストールする"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt lại Homebrew"
           }
         },
         "zh-Hans" : {
@@ -5552,6 +6528,12 @@
             "value" : "再インストール"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang cài đặt lại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5587,6 +6569,12 @@
             "value" : "再起動"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động lại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5597,6 +6585,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重新啟動"
+          }
+        }
+      }
+    },
+    "Restart" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động lại"
           }
         }
       }
@@ -5620,6 +6618,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "変更を反映するには Applite を再起動してください。"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động lại LegitApp để áp dụng thay đổi."
           }
         },
         "zh-Hans" : {
@@ -5657,6 +6661,12 @@
             "value" : "もう一度やり直して下さい"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử lại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5690,6 +6700,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "インストールを再試行する"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử cài đặt lại"
           }
         },
         "zh-Hans" : {
@@ -5727,6 +6743,12 @@
             "value" : "もう一度読み込んで下さい"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử tải lại"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5740,6 +6762,20 @@
           }
         }
       }
+    },
+    "Running" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang chạy"
+          }
+        }
+      }
+    },
+    "Search or enter formula name" : {
+
     },
     "Search Sorting Options" : {
       "localizations" : {
@@ -5759,6 +6795,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "検索並び替えオプション"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuỳ chọn sắp xếp tìm kiếm"
           }
         },
         "zh-Hans" : {
@@ -5796,6 +6838,12 @@
             "value" : "全て表示"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem tất cả"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5829,6 +6877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "フォルダーを選択"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn thư mục"
           }
         },
         "zh-Hans" : {
@@ -5866,6 +6920,12 @@
             "value" : "Brewのパスが無効です"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đường dẫn brew đã chọn không hợp lệ!"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5876,6 +6936,27 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇的brew路徑無效！"
+          }
+        }
+      }
+    },
+    "Service name" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên dịch vụ"
+          }
+        }
+      }
+    },
+    "Services" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dịch vụ"
           }
         }
       }
@@ -5899,6 +6980,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "シェルの出力"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kết quả Shell"
           }
         },
         "zh-Hans" : {
@@ -5936,6 +7023,12 @@
             "value" : "並べ替え"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sắp xếp theo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5970,6 +7063,12 @@
             "value" : "スポンサー"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tài trợ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5984,8 +7083,19 @@
         }
       }
     },
+    "Start" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu"
+          }
+        }
+      }
+    },
     "Start Using Applite" : {
       "comment" : "Onboarding finish button",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -6005,6 +7115,12 @@
             "value" : "Appliteの使用を開始する"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu dùng LegitApp"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6015,6 +7131,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用Applite開始"
+          }
+        }
+      }
+    },
+    "Start Using LegitApp" : {
+
+    },
+    "Stop" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dừng"
+          }
+        }
+      }
+    },
+    "Stopped" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã dừng"
           }
         }
       }
@@ -6039,6 +7179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "システム"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hệ thống"
           }
         },
         "zh-Hans" : {
@@ -6071,6 +7217,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap"
@@ -6111,6 +7263,12 @@
             "value" : "完了したタスク"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác vụ hoàn thành"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6144,6 +7302,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "タスクエラー"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lỗi tác vụ"
           }
         },
         "zh-Hans" : {
@@ -6182,6 +7346,12 @@
             "value" : "ターミナル"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminal"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6197,7 +7367,7 @@
       }
     },
     "This app" : {
-      "comment" : "Applite app card description",
+      "comment" : "LegitApp app card description",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -6215,6 +7385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "このアプリ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng này"
           }
         },
         "zh-Hans" : {
@@ -6252,6 +7428,12 @@
             "value" : "このアプリはサードパーティのタップからです：\n`%@`"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng này đến từ tap bên thứ ba:\n`%@`"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6287,6 +7469,12 @@
             "value" : "このアプリケーションは[Homebrew](https://brew.sh/)パッケージ マネージャー(略してBrew)を使用してアプリケーションをダウンロードします\nHomebrewは便利な開発ツールやデスクトップアプリケーションをダウンロード出来る無料のオープンソースコマンドラインユーティリティです"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng này sử dụng [Homebrew](https://brew.sh/) (gọi tắt là brew) để tải ứng dụng. Homebrew là công cụ dòng lệnh miễn phí và mã nguồn mở có thể tải công cụ lập trình và ứng dụng desktop."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6303,6 +7491,7 @@
     },
     "This application uses the free and open source [Homebrew](https://brew.sh/) package manager to download and manage applications. Applite has detected that you don't have brew installed, so it will create a new brew installation just for Applite under `~/Library/Application Support/Applite.`" : {
       "comment" : "Setup Applite's brew installtion info view description",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -6322,6 +7511,12 @@
             "value" : "このアプリケーションは、無料でオープンソースの [Homebrew](https://brew.sh/) パッケージマネージャーを使用してアプリケーションをダウンロードおよび管理します。Applite は brew がインストールされていないことを検出したため、`~/Library/Application Support/Applite` に Applite 専用の新しい brew インストールを作成します。"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng này sử dụng [Homebrew](https://brew.sh/) miễn phí và mã nguồn mở để tải và quản lý ứng dụng. LegitApp đã phát hiện bạn chưa cài đặt brew, vì vậy sẽ tạo bản cài đặt brew riêng cho LegitApp tại `~/Library/Application Support/LegitApp.`"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6335,6 +7530,9 @@
           }
         }
       }
+    },
+    "This application uses the free and open source [Homebrew](https://brew.sh/) package manager to download and manage applications. LegitApp has detected that you don't have brew installed, so it will create a new brew installation just for LegitApp under `~/Library/Application Support/LegitApp.`" : {
+      "comment" : "Setup LegitApp's brew installation info view description"
     },
     "This will (re)install Applite's Homebrew installation at: `~/Library/Application Support/Applite/homebrew`" : {
       "comment" : "Homebrew reinstallation note",
@@ -6357,6 +7555,12 @@
             "value" : "これにより、AppliteのHomebrewのインストール先が\n`~/Library/Application Support/Applite/homebrew` に(再)インストールされます"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thao tác này sẽ (cài đặt lại) Homebrew của LegitApp tại: `~/Library/Application Support/LegitApp/homebrew`"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6373,6 +7577,7 @@
     },
     "This will uninstall all files and cache associated with Applite." : {
       "comment" : "Uninstall applite window description",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -6392,6 +7597,12 @@
             "value" : "これによりAppliteに関連付けられた全てのファイルとキャッシュがアンインストールされます"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thao tác này sẽ gỡ cài đặt tất cả file và bộ nhớ đệm liên quan đến LegitApp."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6405,6 +7616,9 @@
           }
         }
       }
+    },
+    "This will uninstall all files and cache associated with LegitApp." : {
+      "comment" : "Uninstall LegitApp window description"
     },
     "Troubleshooting" : {
       "comment" : "Applite troubleshooting website link",
@@ -6425,6 +7639,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "トラブルシューティング"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khắc phục sự cố"
           }
         },
         "zh-Hans" : {
@@ -6462,6 +7682,12 @@
             "value" : "少数のダウンロードフィルターを無効にする"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt bộ lọc ít lượt tải"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6495,6 +7721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アンインストール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt"
           }
         },
         "zh-Hans" : {
@@ -6532,6 +7764,12 @@
             "value" : "アンインストールとデータ削除"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt & xoá dữ liệu ứng dụng"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6548,6 +7786,7 @@
     },
     "Uninstall Applite" : {
       "comment" : "Uninstall Applite window title",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -6565,6 +7804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appliteをアンインストール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt LegitApp"
           }
         },
         "zh-Hans" : {
@@ -6602,6 +7847,12 @@
             "value" : "Applite関連ファイル及びキャッシュをアンインストール"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt LegitApp, file và bộ nhớ đệm liên quan."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6637,6 +7888,12 @@
             "value" : "Appliteをアンインストール..."
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt LegitApp..."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6652,7 +7909,17 @@
       }
     },
     "Uninstall Homebrew" : {
-
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gỡ cài đặt Homebrew"
+          }
+        }
+      }
+    },
+    "Uninstall LegitApp" : {
+      "comment" : "Uninstall LegitApp window title"
     },
     "Uninstalling" : {
       "comment" : "Progress text",
@@ -6674,6 +7941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アンインストール"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang gỡ cài đặt"
           }
         },
         "zh-Hans" : {
@@ -6711,6 +7984,12 @@
             "value" : "更新"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6744,6 +8023,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "全て更新"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật tất cả"
           }
         },
         "zh-Hans" : {
@@ -6782,6 +8067,12 @@
             "value" : "アプリの更新やアンインストールをします。削除したアプリのファイルは残りません"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật và gỡ cài đặt ứng dụng. Không còn file thừa từ ứng dụng đã xoá."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6815,6 +8106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アップデートに失敗しました"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật thất bại"
           }
         },
         "zh-Hans" : {
@@ -6852,6 +8149,12 @@
             "value" : "Homebrewを更新する"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật Homebrew"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6885,6 +8188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アップデート"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật"
           }
         },
         "zh-Hans" : {
@@ -6923,6 +8232,12 @@
             "value" : "アップデート"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang cập nhật"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6956,6 +8271,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カスタムインストールディレクトリを使用する"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thư mục cài đặt tuỳ chỉnh"
           }
         },
         "zh-Hans" : {
@@ -6993,6 +8314,12 @@
             "value" : "別の brew パスを使用"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng đường dẫn brew khác"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7026,6 +8353,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "システムプロキシを使用する"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng proxy hệ thống"
           }
         },
         "zh-Hans" : {
@@ -7064,6 +8397,12 @@
             "value" : "ユーティリティ"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiện ích"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7099,6 +8438,12 @@
             "value" : "値"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giá trị"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7109,6 +8454,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "值"
+          }
+        }
+      }
+    },
+    "Vietnamese Apps" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng Việt Nam"
           }
         }
       }
@@ -7133,6 +8489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "仮想化"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ảo hoá"
           }
         },
         "zh-Hans" : {
@@ -7170,6 +8532,12 @@
             "value" : "警告"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cảnh báo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7203,6 +8571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Webサイト"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang web"
           }
         },
         "zh-Hans" : {
@@ -7240,6 +8614,12 @@
             "value" : "毎週"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuần"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7256,6 +8636,7 @@
     },
     "Welcome to Applite" : {
       "comment" : "Setup welcome page title",
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -7275,6 +8656,12 @@
             "value" : "Appliteへようこそ"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chào mừng đến LegitApp"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7288,6 +8675,9 @@
           }
         }
       }
+    },
+    "Welcome to LegitApp" : {
+      "comment" : "Setup welcome page title"
     },
     "Xcode Command Line Tools" : {
       "localizations" : {
@@ -7345,6 +8735,12 @@
             "value" : "はい"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7380,6 +8776,12 @@
             "value" : "Xcodeコマンドラインツールをインストールするように求められます。このアプリの動作に必要な為、インストールを選択して下さい。インストールには数分かかります。進捗状況はインストールウィンドウ上で確認できます。"
           }
         },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn sẽ được nhắc cài đặt Xcode Command Line Tools, vui lòng nhấp \"Cài đặt\" vì đây là yêu cầu để ứng dụng hoạt động. Quá trình này mất vài phút, bạn có thể theo dõi tiến trình trong cửa sổ cài đặt."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7413,6 +8815,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xcodeコマンドラインツールをインストールするように求められます。このアプリの動作に必要な為、インストールを選択して下さい"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn sẽ được nhắc cài đặt Xcode Command Line Tools. Vui lòng chọn \"Cài đặt\" vì đây là yêu cầu để ứng dụng hoạt động."
           }
         },
         "zh-Hans" : {

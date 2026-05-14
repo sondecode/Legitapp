@@ -1,5 +1,19 @@
 [
     {
+        "id": "Vietnamese Apps",
+        "sfSymbol": "flag.fill",
+        "casks": [
+            "zalo",
+            "viber",
+            "capcut",
+            "coccoc",
+            "zoom",
+            "telegram-desktop",
+            "whatsapp",
+            "obs"
+        ]
+    },
+    {
         "id": "Browsers",
         "sfSymbol": "network",
         "casks": [

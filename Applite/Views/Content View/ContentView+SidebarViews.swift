@@ -46,6 +46,9 @@ extension ContentView {
             }
 
             Section("Homebrew") {
+                Label("Services", systemImage: "server.rack")
+                    .tag(SidebarItem.services)
+
                 Label("Manage Homebrew", systemImage: "mug")
                     .tag(SidebarItem.brew)
             }

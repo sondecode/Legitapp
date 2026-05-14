@@ -17,11 +17,11 @@ struct UninstallSelfView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Uninstall Applite", comment: "Uninstall Applite window title")
+            Text("Uninstall LegitApp", comment: "Uninstall LegitApp window title")
                 .font(.system(size: 26, weight: .bold))
                 .padding(.bottom)
             
-            Text("This will uninstall all files and cache associated with Applite.", comment: "Uninstall applite window description")
+            Text("This will uninstall all files and cache associated with LegitApp.", comment: "Uninstall LegitApp window description")
 
             Toggle("Delete Homebrew cache", isOn: $deleteBrewCache)
                 .disabled(uninstallHomebrew)
@@ -49,7 +49,7 @@ struct UninstallSelfView: View {
             Button(role: .destructive) {
                 showConfirmation = true
             } label: {
-                Label("Uninstall Applite", systemImage: "trash.fill")
+                Label("Uninstall LegitApp", systemImage: "trash.fill")
             }
             .buttonStyle(.borderedProminent)
             .tint(.red)

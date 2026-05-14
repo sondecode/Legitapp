@@ -12,7 +12,7 @@ extension SetupView {
     struct Welcome: View {
         var body: some View {
             VStack {
-                Text("Welcome to Applite", comment: "Setup welcome page title")
+                Text("Welcome to LegitApp", comment: "Setup welcome page title")
                     .font(.appliteSmallTitle)
                     .padding(.top, 50)
                     .padding(.bottom, 25)
@@ -44,9 +44,13 @@ extension SetupView {
                 HStack {
                     Image(systemName: sfSymbol)
                         .font(.system(size: 22))
-                        .padding(.trailing, 5)
                         .symbolRenderingMode(.hierarchical)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(Color.accentColor)
+                        .frame(width: 40, height: 40)
+                        .padding(6)
+                        .background(.regularMaterial)
+                        .clipShape(Circle())
+                        .shadow(radius: 2)
 
                     VStack(alignment: .leading) {
                         Text(title, comment: "Title")
@@ -55,6 +59,7 @@ extension SetupView {
                         Text(description, comment: "Description")
                             .font(.system(size: 12, weight: .light))
                     }
+                    .padding(.leading, 4)
                 }
             }
         }

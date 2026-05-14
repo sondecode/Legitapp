@@ -17,7 +17,7 @@ extension SetupView {
                 .font(.appliteLargeTitle)
                 .padding(.top, 40)
 
-            Button("Start Using Applite") {
+            Button("Start Using LegitApp") {
                 setupComplete = true
             }
             .buttonStyle(.borderedProminent)

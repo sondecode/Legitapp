@@ -22,7 +22,7 @@ extension DiscoverSectionView {
                 navigationSelection = .appCategory(category: category)
             }
             .buttonStyle(.plain)
-            .foregroundColor(.blue)
+            .foregroundColor(.accentColor)
             .padding(.bottom, 3)
         }
     }

@@ -26,10 +26,10 @@ struct AppliteAppView: View {
             
             // Name and description
             VStack(alignment: .leading) {
-                Text("Applite", comment: "Applite app card title")
+                Text("LegitApp", comment: "LegitApp app card title")
                     .font(.system(size: 16, weight: .bold))
                 
-                Text("This app", comment: "Applite app card description")
+                Text("This app", comment: "LegitApp app card description")
                     .foregroundColor(.secondary)
             }
             
@@ -37,8 +37,8 @@ struct AppliteAppView: View {
                 
             CheckForUpdatesView(updater: updaterController.updater) {
                 Label("Update", systemImage: "arrow.uturn.down")
-                    .buttonStyle(.borderedProminent)
             }
+            .buttonStyle(.borderedProminent)
             .clipShape(Capsule())
             
             Button {
