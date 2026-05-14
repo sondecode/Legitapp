@@ -28,7 +28,7 @@
 
 LegitApp là ứng dụng macOS miễn phí, mã nguồn mở giúp cài đặt và quản lý hơn 6.000 ứng dụng thông qua [Homebrew](https://brew.sh/). Xây dựng bằng [Swift](https://developer.apple.com/swift/) và [SwiftUI](https://developer.apple.com/xcode/swiftui/), được tối ưu cho người dùng Việt Nam.
 
-LegitApp được fork từ [Applite](https://github.com/milanvarady/Applite) và mở rộng với các tính năng dành riêng cho thị trường Việt Nam.
+LegitApp được fork từ [LegitApp](https://github.com/sondecode/legitapp) và mở rộng với các tính năng dành riêng cho thị trường Việt Nam.
 
 ## Tải về
 
@@ -51,11 +51,11 @@ Yêu cầu tối thiểu: **macOS 14 Sonoma+**
 
 LegitApp được cấp phép theo [MIT](https://choosealicense.com/licenses/mit/) License. Xem [LICENSE](LICENSE.txt) để biết thêm chi tiết.
 
-Dự án này được xây dựng dựa trên [Applite](https://github.com/milanvarady/Applite) bởi Milán Várady.
+Dự án này được xây dựng dựa trên [LegitApp](https://github.com/sondecode/legitapp) bởi Milán Várady.
 
 
 
-# Applite
+# LegitApp
 
 User-friendly GUI macOS application for Homebrew Casks
 
@@ -83,9 +83,9 @@ User-friendly GUI macOS application for Homebrew Casks
 
 ## About
 
-Applite is a free and open-source macOS application that streamlines the installation and management of third-party apps using [Homebrew](https://brew.sh/). The app is built using [Swift](https://developer.apple.com/swift/) and [SwiftUI](https://developer.apple.com/xcode/swiftui/).
+LegitApp is a free and open-source macOS application that streamlines the installation and management of third-party apps using [Homebrew](https://brew.sh/). The app is built using [Swift](https://developer.apple.com/swift/) and [SwiftUI](https://developer.apple.com/xcode/swiftui/).
 
-Applite aims to be more of an app store for third-party apps than a full-blown homebrew GUI wrapper. The main goal of the application is to bring the convenience of [Homebrew casks](https://github.com/Homebrew/homebrew-cask) to the non-technical user. So the UI was designed with simplicity and ease of use in mind.
+LegitApp aims to be more of an app store for third-party apps than a full-blown homebrew GUI wrapper. The main goal of the application is to bring the convenience of [Homebrew casks](https://github.com/Homebrew/homebrew-cask) to the non-technical user. So the UI was designed with simplicity and ease of use in mind.
 
 FAQ on the [official website](https://aerolite.dev/applite/FAQ.html).
 
@@ -96,7 +96,7 @@ FAQ on the [official website](https://aerolite.dev/applite/FAQ.html).
 
 ## Download
 
-[Download DMG](https://github.com/milanvarady/applite/releases/latest/download/Applite.dmg)
+[Download DMG](https://github.com/sondecode/legitapp/releases/latest/download/LegitApp.dmg)
 
 or
 
@@ -134,7 +134,7 @@ The project is open to contributions. See the [Contribution Guidelines](docs/CON
 
 ## License
 
-Applite is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License. See [LICENSE](LICENSE.txt) for more details.
+LegitApp is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License. See [LICENSE](LICENSE.txt) for more details.
 
 ## Alternatives
 

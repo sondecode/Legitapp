@@ -39,7 +39,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.3.1.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.3.1/Applite.dmg" length="4037530" type="application/octet-stream" sparkle:edSignature="Ve+PV2hd7swyfGPuuZ1UbIxb8uz+NaiLiv3zaWp3GqLHRlVUXuhjgAUEw2ekE7v6w005E1JPS5rABTMCsmzSDQ=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.3.1/LegitApp.dmg" length="4037530" type="application/octet-stream" sparkle:edSignature="Ve+PV2hd7swyfGPuuZ1UbIxb8uz+NaiLiv3zaWp3GqLHRlVUXuhjgAUEw2ekE7v6w005E1JPS5rABTMCsmzSDQ=="/>
         </item>
         <item>
             <title>1.3.0</title>
@@ -50,7 +50,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.3.0.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.3.0/Applite.dmg" length="3945282" type="application/octet-stream" sparkle:edSignature="h/S3/yNeBCYe07BrmuZ16ZzTBeKabZmSqB0ifr84ya/1HeBRD9vL19jh7BX4p2UCLJvv6y1l1Uzea7ZwbuLsDg=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.3.0/LegitApp.dmg" length="3945282" type="application/octet-stream" sparkle:edSignature="h/S3/yNeBCYe07BrmuZ16ZzTBeKabZmSqB0ifr84ya/1HeBRD9vL19jh7BX4p2UCLJvv6y1l1Uzea7ZwbuLsDg=="/>
         </item>
         <item>
             <title>1.2.5</title>
@@ -62,7 +62,7 @@
                 https://aerolite.dev/applite/releases/1.2.5.html
             </sparkle:releaseNotesLink>
             <sparkle:criticalUpdate></sparkle:criticalUpdate>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.2.5/Applite.dmg" length="3350419" type="application/octet-stream" sparkle:edSignature="M9zEZ9x4EfmNkngm40N4caz2lE6MyLBjHJTH+WK68tzs0A1Nhf7Z+O1Q6C6pujEvZMBD9eRLfVBd/2I9UwR0DA=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.2.5/LegitApp.dmg" length="3350419" type="application/octet-stream" sparkle:edSignature="M9zEZ9x4EfmNkngm40N4caz2lE6MyLBjHJTH+WK68tzs0A1Nhf7Z+O1Q6C6pujEvZMBD9eRLfVBd/2I9UwR0DA=="/>
         </item>
         <item>
             <title>1.2.4</title>
@@ -73,7 +73,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.2.4.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.2.4/Applite.dmg" length="3346635" type="application/octet-stream" sparkle:edSignature="DMDK6YfVclvbqMC1jDIoj8XQVYmZTGydCLd9yjs76KnB8OI5AgcoX3bKP07GCEo2Xfu7U6QcclcwVM53O7I4Bw=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.2.4/LegitApp.dmg" length="3346635" type="application/octet-stream" sparkle:edSignature="DMDK6YfVclvbqMC1jDIoj8XQVYmZTGydCLd9yjs76KnB8OI5AgcoX3bKP07GCEo2Xfu7U6QcclcwVM53O7I4Bw=="/>
         </item>
         <item>
             <title>1.2.3</title>
@@ -84,7 +84,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.2.3.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.2.3/Applite.dmg" length="2642024" type="application/octet-stream" sparkle:edSignature="4dASuIXfygcFowi8rpffokdyH3WZ7SlFJ7OkK70NEK0x9ywy26C1X4Zu3woXnBVEoKTZro6R73/mozBQMLEVAQ=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.2.3/LegitApp.dmg" length="2642024" type="application/octet-stream" sparkle:edSignature="4dASuIXfygcFowi8rpffokdyH3WZ7SlFJ7OkK70NEK0x9ywy26C1X4Zu3woXnBVEoKTZro6R73/mozBQMLEVAQ=="/>
         </item>
         <item>
             <title>1.2.2</title>
@@ -95,7 +95,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.2.2.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.2.2/Applite.dmg" length="2641546" type="application/octet-stream" sparkle:edSignature="5y9iUkyc6/ZJ9s1M5dXPCN24+urgan6Ohg14IJ1FBIajyBr0HL7w6c5a0BXH1zxl+7ECQeAvAPSzNooMq/shDQ=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.2.2/LegitApp.dmg" length="2641546" type="application/octet-stream" sparkle:edSignature="5y9iUkyc6/ZJ9s1M5dXPCN24+urgan6Ohg14IJ1FBIajyBr0HL7w6c5a0BXH1zxl+7ECQeAvAPSzNooMq/shDQ=="/>
         </item>
         <item>
             <title>1.2.1</title>
@@ -106,7 +106,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.2.1.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.2.1/Applite.dmg" length="2626985" type="application/octet-stream" sparkle:edSignature="utc735WrcYWrTXBrNVFoUZHfM2ENlimEQK/beat7ka8PkFsyzl1im1ak2AV1tzo2PHvLEvZ8tOAMoJfy6tQcBA=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.2.1/LegitApp.dmg" length="2626985" type="application/octet-stream" sparkle:edSignature="utc735WrcYWrTXBrNVFoUZHfM2ENlimEQK/beat7ka8PkFsyzl1im1ak2AV1tzo2PHvLEvZ8tOAMoJfy6tQcBA=="/>
         </item>
         <item>
             <title>1.2</title>
@@ -117,7 +117,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.2.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.2/Applite.dmg" length="2619967" type="application/octet-stream" sparkle:edSignature="S0QZaUojkmYcpWaGXbE03QU55GSiVABwtH6Wijy0ftj6nA02FL1ljHvucDavKSVnqKaPgiao6kgiPBFVAk4HBQ=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.2/LegitApp.dmg" length="2619967" type="application/octet-stream" sparkle:edSignature="S0QZaUojkmYcpWaGXbE03QU55GSiVABwtH6Wijy0ftj6nA02FL1ljHvucDavKSVnqKaPgiao6kgiPBFVAk4HBQ=="/>
         </item>
         <item>
             <title>1.1</title>
@@ -128,7 +128,7 @@
             <sparkle:releaseNotesLink>
                 https://aerolite.dev/applite/releases/1.1.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.1/Applite.dmg" length="2611883" type="application/octet-stream" sparkle:edSignature="AsiGMXrQX3oQ8VFojqlVz+0MLjGzKUVq5ClQMAFonklXoGochcIoz7hSFvqc35ye+BWeUE4STDCSdRCJhwqoDA=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.1/LegitApp.dmg" length="2611883" type="application/octet-stream" sparkle:edSignature="AsiGMXrQX3oQ8VFojqlVz+0MLjGzKUVq5ClQMAFonklXoGochcIoz7hSFvqc35ye+BWeUE4STDCSdRCJhwqoDA=="/>
         </item>
         <item>
             <title>1.0</title>
@@ -136,7 +136,7 @@
             <sparkle:version>3</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/milanvarady/Applite/releases/download/v1.0/Applite.dmg" length="2558447" type="application/octet-stream" sparkle:edSignature="ptOKlpttacG59IfZCHo92Z1e5BhODu9ZU13NkEsrxlyiNgeKUuuKuvhHWCD+/vPSqpb/+awfPaRnmFfYOJT9CQ=="/>
+            <enclosure url="https://github.com/sondecode/legitapp/releases/download/v1.0/LegitApp.dmg" length="2558447" type="application/octet-stream" sparkle:edSignature="ptOKlpttacG59IfZCHo92Z1e5BhODu9ZU13NkEsrxlyiNgeKUuuKuvhHWCD+/vPSqpb/+awfPaRnmFfYOJT9CQ=="/>
         </item>
     </channel>
 </rss>

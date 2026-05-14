@@ -1,4 +1,4 @@
-# Applite Contribution Guide
+# LegitApp Contribution Guide
 
 ## Table of Contents
 
@@ -11,11 +11,11 @@
 
 ## Project Goal
 
-> Applite aims to be more of an app store for third-party apps than a full-blown homebrew GUI wrapper.
+> LegitApp aims to be more of an app store for third-party apps than a full-blown homebrew GUI wrapper.
 
-The goal of Applite is to bring the convenience of Homebrew casks to the average user. It aims to be as simple as possible in every aspect. Easy setup, simple UI that can be understood at a glance, and no technical knowledge required.
+The goal of LegitApp is to bring the convenience of Homebrew casks to the average user. It aims to be as simple as possible in every aspect. Easy setup, simple UI that can be understood at a glance, and no technical knowledge required.
 
-Applite has features aimed at more experienced users (e.g. custom brew path and installation directory), but these are not part of the main interface by design.
+LegitApp has features aimed at more experienced users (e.g. custom brew path and installation directory), but these are not part of the main interface by design.
 
 ## If you found a bug
 
@@ -23,7 +23,7 @@ Applite has features aimed at more experienced users (e.g. custom brew path and 
 > - Describe what the problem is
 > - Describe the steps you took before it occurred
 > - Include error messages, logs
-> - Provide app version and device information (e.g. Applite: v1.2, MacBook Air M2)
+> - Provide app version and device information (e.g. LegitApp: v1.2, MacBook Air M2)
 
 If the problem is related to application actions, e.g. installing, updating, or uninstalling. Be sure to check if you can find the error message. When an app encounters an error it should look like this:
 
@@ -33,7 +33,7 @@ click on the info button to see the error.
 
 ### Finding logs in `Console.app`
 
-If you are familiar with the console, you can check the Applite logs. Here is what you need to do:
+If you are familiar with the console, you can check the LegitApp logs. Here is what you need to do:
 
 - Click on your device in the `Console.app` 
 - Click on the **Start** button to begin collecting logs
