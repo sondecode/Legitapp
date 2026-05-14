@@ -153,6 +153,10 @@
 		5B4451803BBF21786A1092EE /* InstallFormulaSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAC9000BE550F607241AE8 /* InstallFormulaSheet.swift */; };
 		82F42322256A8775A7AE8EC6 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5A9A127772F3C89E37A77 /* ServiceManager.swift */; };
 		BD7546572A868DA30083996B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BD7546562A868DA30083996B /* Localizable.xcstrings */; };
+		1FF3F5683392492998148BEE91D9D359 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FA9F6EDFD47B597F83B3E98FD7458 /* MenuBarView.swift */; };
+		42A0E27254134574A08F28A7BCE8266A /* MenuBarIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAAE3A5AD39461DB7DB655982980363 /* MenuBarIconLabel.swift */; };
+		685D6AE25C134D4A940B2C5004E00BDA /* MenuBarServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E19B01E5648BCB7719AADA0474EDF /* MenuBarServiceRow.swift */; };
+		EFB2A7FB5E0B453BBC0F80CE82DEC9A6 /* MenuBarCaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADC9D6D85B4EA6ADEEA9442148DD41 /* MenuBarCaskRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -312,6 +316,10 @@
 		41DF006329EAA094004EB7AE /* SendNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNotification.swift; sourceTree = "<group>"; };
 		5E00EE37806C6D1F80F89B15 /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServicesView.swift; path = "Applite/Views/Detail Views/ServicesView.swift"; sourceTree = SOURCE_ROOT; };
 		BD7546562A868DA30083996B /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		CA5FA9F6EDFD47B597F83B3E98FD7458 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuBarView.swift; path = "Applite/Views/Menu Bar/MenuBarView.swift"; sourceTree = SOURCE_ROOT; };
+		CDAAE3A5AD39461DB7DB655982980363 /* MenuBarIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuBarIconLabel.swift; path = "Applite/Views/Menu Bar/MenuBarIconLabel.swift"; sourceTree = SOURCE_ROOT; };
+		A62E19B01E5648BCB7719AADA0474EDF /* MenuBarServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuBarServiceRow.swift; path = "Applite/Views/Menu Bar/MenuBarServiceRow.swift"; sourceTree = SOURCE_ROOT; };
+		9AADC9D6D85B4EA6ADEEA9442148DD41 /* MenuBarCaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuBarCaskRow.swift; path = "Applite/Views/Menu Bar/MenuBarCaskRow.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +531,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		99A10027737041438942D35C4DFDB833 /* Menu Bar */ = {
+			isa = PBXGroup;
+			children = (
+				CA5FA9F6EDFD47B597F83B3E98FD7458 /* MenuBarView.swift */,
+				CDAAE3A5AD39461DB7DB655982980363 /* MenuBarIconLabel.swift */,
+				A62E19B01E5648BCB7719AADA0474EDF /* MenuBarServiceRow.swift */,
+				9AADC9D6D85B4EA6ADEEA9442148DD41 /* MenuBarCaskRow.swift */,
+			);
+			name = "Menu Bar";
+			sourceTree = "<group>";
+		};
 		4140750328DF5ED00073EB22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +554,7 @@
 				41062C982A3A263F00FD48EA /* UninstallSelfView.swift */,
 				4166EE6F28F5D4C900CE305A /* Commands.swift */,
 				412635412A77FA1A00155034 /* Components */,
+				99A10027737041438942D35C4DFDB833 /* Menu Bar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1048,6 +1068,10 @@
 				419256942D24255000D9EF10 /* CaskLoadError.swift in Sources */,
 				419256A62D25D00200D9EF10 /* AppMigrationView+ImportView.swift in Sources */,
 				419256C02D273B2800D9EF10 /* SearchableCaskCollection.swift in Sources */,
+				1FF3F5683392492998148BEE91D9D359 /* MenuBarView.swift in Sources */,
+				42A0E27254134574A08F28A7BCE8266A /* MenuBarIconLabel.swift in Sources */,
+				685D6AE25C134D4A940B2C5004E00BDA /* MenuBarServiceRow.swift in Sources */,
+				EFB2A7FB5E0B453BBC0F80CE82DEC9A6 /* MenuBarCaskRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

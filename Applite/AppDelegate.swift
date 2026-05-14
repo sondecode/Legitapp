@@ -9,8 +9,9 @@ import Foundation
 import AppKit
 
 class ApplicationDelegate: NSObject, NSApplicationDelegate {
-    // Close app after last window closed
+    // Only keep the app alive after window close if the menu bar icon is enabled
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return true
+        let keepRunning = UserDefaults.standard.bool(forKey: Preferences.keepRunningInMenuBar.rawValue)
+        return !keepRunning
     }
 }

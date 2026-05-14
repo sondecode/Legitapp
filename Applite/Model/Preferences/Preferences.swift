@@ -41,4 +41,8 @@ enum Preferences: String {
     case searchSortOption
     case hideUnpopularApps
     case hideDisabledApps
+
+    // Menu bar
+    case showMenuBarIcon
+    case keepRunningInMenuBar
 }

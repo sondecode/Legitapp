@@ -18,6 +18,7 @@ struct LegitApp: App {
     
     @AppStorage(Preferences.colorSchemePreference.rawValue) var colorSchemePreference: ColorSchemePreference = .system
     @AppStorage(Preferences.setupComplete.rawValue) var setupComplete: Bool = false
+    @AppStorage(Preferences.showMenuBarIcon.rawValue) var showMenuBarIcon: Bool = true
     
     /// Sparkle update controller
     private let updaterController: SPUStandardUpdaterController
@@ -78,5 +79,16 @@ struct LegitApp: App {
         WindowGroup("Cask Info", for: CaskAdditionalInfo.self) { $info in
             CaskInfoWindowView(info: info ?? .dummy)
         }
+
+        MenuBarExtra(isInserted: $showMenuBarIcon) {
+            MenuBarView()
+                .environmentObject(caskManager)
+        } label: {
+            MenuBarIconLabel(
+                activeTaskCount: caskManager.activeTasks.count,
+                updatesCount: caskManager.outdatedCasks.casks.count
+            )
+        }
+        .menuBarExtraStyle(.window)
     }
 }

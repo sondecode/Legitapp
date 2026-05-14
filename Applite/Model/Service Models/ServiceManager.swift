@@ -49,7 +49,19 @@ final class ServiceManager: ObservableObject {
         activeTasks.insert(service.name)
         defer { activeTasks.remove(service.name) }
         do {
-            try await Shell.runBrewCommand(args)
+            let brewPath = BrewPaths.currentBrewExecutable.quotedPath()
+            let brewArgs = args.joined(separator: " ")
+            // Suppress brew auto-update for faster service operations
+            let envPrefix = "env HOMEBREW_NO_AUTO_UPDATE=1"
+            let command: String
+            if service.isSystemService {
+                // System services (LaunchDaemons / root user) require sudo -A
+                // SUDO_ASKPASS is set by Shell.createProcess so this prompts via osascript
+                command = "sudo -A \(envPrefix) \(brewPath) \(brewArgs)"
+            } else {
+                command = "\(envPrefix) \(brewPath) \(brewArgs)"
+            }
+            try await Shell.runAsync(command)
             await loadServices()
         } catch {
             logger.error("Service command \(args.joined(separator: " ")) failed: \(error.localizedDescription)")

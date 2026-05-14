@@ -41,6 +41,7 @@ struct BrewService: Identifiable, Hashable {
         switch statusStr {
         case "started":  status = .started
         case "stopped":  status = .stopped
+        case "none":     status = .stopped   // installed but never configured
         case "error":    status = .error
         default:         status = .unknown
         }
@@ -53,5 +54,12 @@ struct BrewService: Identifiable, Hashable {
     static func parseAll(output: String) -> [BrewService] {
         let lines = output.components(separatedBy: "\n")
         return lines.dropFirst().compactMap { parse(line: $0) }
+    }
+
+    /// True when this service runs as root (lives in /Library/LaunchDaemons/ or user == "root")
+    var isSystemService: Bool {
+        if user == "root" { return true }
+        guard let file = file else { return false }
+        return file.hasPrefix("/Library/LaunchDaemons/")
     }
 }

@@ -14,6 +14,8 @@ extension SettingsView {
         @AppStorage(Preferences.catalogUpdateFrequency.rawValue) var catalogUpdateFrequency: CatalogUpdateFrequency = .everyAppLaunch
         @AppStorage(Preferences.notificationSuccess.rawValue) var notificationOnSuccess: Bool = false
         @AppStorage(Preferences.notificationFailure.rawValue) var notificationOnFailure: Bool = true
+        @AppStorage(Preferences.showMenuBarIcon.rawValue) var showMenuBarIcon: Bool = true
+        @AppStorage(Preferences.keepRunningInMenuBar.rawValue) var keepRunningInMenuBar: Bool = false
 
         /// Needed for a workaround for changing the color scheme
         @State var fixingColor = false
@@ -90,6 +92,19 @@ extension SettingsView {
 
                 Toggle("Task completions", isOn: $notificationOnSuccess)
                 Toggle("Task errors", isOn: $notificationOnFailure)
+
+                Divider()
+                    .padding(.vertical)
+
+                Text("Menu Bar", comment: "Menu bar settings title")
+                    .bold()
+
+                Toggle("Show menu bar icon", isOn: $showMenuBarIcon)
+                Toggle("Keep running when window is closed", isOn: $keepRunningInMenuBar)
+                    .disabled(!showMenuBarIcon)
+                    .onChange(of: showMenuBarIcon) { enabled in
+                        if !enabled { keepRunningInMenuBar = false }
+                    }
             }
             .padding()
             .onChange(of: colorSchemePreference) {
