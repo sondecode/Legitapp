@@ -49,14 +49,11 @@ struct CaskNetworkService {
             return []
         }
 
-        let arguments = [BrewPaths.currentBrewExecutable.quotedPath(), "ruby", tapInfoRubyScriptPath.paddedWithQuotes()]
-        let command = arguments.joined(separator: " ")
-
         var shellOutput = ""
 
         // We need to use stream here because the regular runAsync cannot handle an output this long
         do {
-            for try await line in Shell.stream(command) {
+            for try await line in Shell.streamBrewCommand(["ruby", tapInfoRubyScriptPath.paddedWithQuotes()]) {
                 shellOutput += line + "\n"
             }
         } catch {

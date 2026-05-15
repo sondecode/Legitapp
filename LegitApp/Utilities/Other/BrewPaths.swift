@@ -101,7 +101,7 @@ struct BrewPaths {
     /// - Returns: Whether the path is valid or not
     static func isBrewPathValid(at url: URL) async -> Bool {
         // Check if Homebrew is returned when checking version
-        guard let output = try? await Shell.runAsync("\(url.quotedPath()) --version") else {
+        guard let output = try? await Shell.runBrewCommand(at: url, ["--version"]) else {
             return false
         }
 

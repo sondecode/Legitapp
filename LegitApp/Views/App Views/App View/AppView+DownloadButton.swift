@@ -25,6 +25,13 @@ extension AppView {
         var body: some View {
             /// Download button
             Button {
+                if cask.info.installMethod == .website {
+                    if let homepageURL = cask.info.homepageURL {
+                        NSWorkspace.shared.open(homepageURL)
+                    }
+                    return
+                }
+
                 if cask.info.warning != nil {
                     // Show download confirmation
                     showCaveatsAndWarnings = true
@@ -36,6 +43,10 @@ extension AppView {
                 if case .disabled(_, _) = cask.info.warning {
                     Image(systemName: "xmark.circle")
                         .foregroundStyle(.red)
+                        .font(.system(size: 22))
+                } else if cask.info.installMethod == .website {
+                    Image(systemName: "safari\(buttonFill ? ".fill" : "")")
+                        .foregroundStyle(Color.accentColor)
                         .font(.system(size: 22))
                 } else {
                     Image(systemName: "arrow.down.to.line.circle\(buttonFill ? ".fill" : "")")
@@ -94,13 +105,17 @@ extension AppView {
                             .fontWeight(.thin)
                     }
 
-                    GetInfoButton(cask: cask)
+                    if cask.info.installMethod == .homebrew {
+                        GetInfoButton(cask: cask)
+                    }
 
                     // Force install button
-                    Button {
-                        showingForceInstallConfirmation = true
-                    } label: {
-                        Label("Force Install", systemImage: "bolt.trianglebadge.exclamationmark.fill")
+                    if cask.info.installMethod == .homebrew {
+                        Button {
+                            showingForceInstallConfirmation = true
+                        } label: {
+                            Label("Force Install", systemImage: "bolt.trianglebadge.exclamationmark.fill")
+                        }
                     }
                 }
                 .padding(8)

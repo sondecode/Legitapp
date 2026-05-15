@@ -31,8 +31,6 @@ extension CaskManager {
             let noQuarantine = UserDefaults.standard.bool(forKey: Preferences.noQuarantine.rawValue)
             if noQuarantine { arguments.append("--no-quarantine") }
 
-            let command = "\(BrewPaths.currentBrewExecutable.quotedPath()) install --cask \(arguments.joined(separator: " "))"
-
             // Setup progress
             cask.progressState = .busy(withTask: "")
 
@@ -41,7 +39,7 @@ extension CaskManager {
 
             // Run install command and stream output
             do {
-                for try await line in Shell.stream(command, pty: true) {
+                for try await line in Shell.streamBrewCommand(["install", "--cask"] + arguments, pty: true) {
                     completeOutput += line + "\n"
 
                     let newProgress = self.parseBrewInstall(output: line)

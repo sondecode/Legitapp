@@ -1225,7 +1225,7 @@
 				INFOPLIST_FILE = "LegitApp-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = LegitApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2023 Milán Várady";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Nguyen Truong Son";
 				INFOPLIST_KEY_UILaunchStoryboardName = S;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1263,7 +1263,7 @@
 				INFOPLIST_FILE = "LegitApp-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = LegitApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2023 Milán Várady";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Nguyen Truong Son";
 				INFOPLIST_KEY_UILaunchStoryboardName = S;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

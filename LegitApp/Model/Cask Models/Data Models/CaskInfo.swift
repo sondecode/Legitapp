@@ -18,9 +18,15 @@ struct CaskInfo: Codable {
     /// Short description
     let description: String
     let homepageURL: URL?
+    let installMethod: InstallMethod
     /// If true app has a .pkg installer
     let pkgInstaller: Bool
     let warning: CaskWarning?
+
+    enum InstallMethod: String, Codable {
+        case homebrew
+        case website
+    }
 
     /// Initialize from a ``CaskDTO`` data transfer object
     init(fromDTO dto: CaskDTO) throws {
@@ -30,6 +36,7 @@ struct CaskInfo: Codable {
         self.name = dto.nameArray[safeIndex: 0] ?? "N/A"
         self.description = dto.desc ?? "N/A"
         self.homepageURL = URL(string: dto.homepage)
+        self.installMethod = .homebrew
         self.pkgInstaller = dto.url.hasSuffix("pkg")
 
         if dto.disabled {
@@ -43,14 +50,29 @@ struct CaskInfo: Codable {
         }
     }
 
-    init(token: String, fullToken: String, tap: String, name: String, description: String, homepageURL: URL?, pkgInstaller: Bool, warning: CaskWarning?) {
+    init(token: String, fullToken: String, tap: String, name: String, description: String, homepageURL: URL?, installMethod: InstallMethod = .homebrew, pkgInstaller: Bool, warning: CaskWarning?) {
         self.token = token
         self.fullToken = fullToken
         self.tap = tap
         self.name = name
         self.description = description
         self.homepageURL = homepageURL
+        self.installMethod = installMethod
         self.pkgInstaller = pkgInstaller
         self.warning = warning
+    }
+
+    func overridingDescription(_ description: String) -> CaskInfo {
+        CaskInfo(
+            token: token,
+            fullToken: fullToken,
+            tap: tap,
+            name: name,
+            description: description,
+            homepageURL: homepageURL,
+            installMethod: installMethod,
+            pkgInstaller: pkgInstaller,
+            warning: warning
+        )
     }
 }

@@ -17,4 +17,38 @@ struct Category: Decodable, Identifiable {
     let casks: [CaskId]
     /// SF Symbol of the category
     let sfSymbol: String
+    /// Optional category-specific metadata for Homebrew casks
+    let apps: [CategoryAppMetadata]
+    /// Apps that are listed for discovery but installed from the app website
+    let websiteOnlyApps: [WebsiteOnlyApp]
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case casks
+        case sfSymbol
+        case apps
+        case websiteOnlyApps
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.id = try container.decode(String.self, forKey: .id)
+        self.casks = try container.decode([CaskId].self, forKey: .casks)
+        self.sfSymbol = try container.decode(String.self, forKey: .sfSymbol)
+        self.apps = try container.decodeIfPresent([CategoryAppMetadata].self, forKey: .apps) ?? []
+        self.websiteOnlyApps = try container.decodeIfPresent([WebsiteOnlyApp].self, forKey: .websiteOnlyApps) ?? []
+    }
+}
+
+struct CategoryAppMetadata: Decodable {
+    let id: CaskId
+    let viDescription: String
+}
+
+struct WebsiteOnlyApp: Decodable {
+    let id: CaskId
+    let name: String
+    let viDescription: String
+    let homepage: URL
 }

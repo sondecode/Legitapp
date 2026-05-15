@@ -51,6 +51,12 @@ actor CaskModelBuilder {
                 .map { $0.casks }
                 .reduce([], +)
         )
+        let appDescriptions = Dictionary(
+            categories.flatMap { category in
+                category.apps.map { ($0.id, $0.viDescription) }
+            },
+            uniquingKeysWith: { first, _ in first }
+        )
 
         // Break caskInfos into chunks for better performance
         let chunks = caskInfos.chunked(into: batchSize)
@@ -64,11 +70,18 @@ actor CaskModelBuilder {
                     var tapAssignments: [(TapId, Cask)] = []
 
                     for caskInfo in chunk {
-                        let isInstalled = installedCasks.contains(caskInfo.fullToken)
+                        let displayInfo: CaskInfo
+                        if let viDescription = appDescriptions[caskInfo.token] {
+                            displayInfo = caskInfo.overridingDescription(viDescription)
+                        } else {
+                            displayInfo = caskInfo
+                        }
+
+                        let isInstalled = installedCasks.contains(displayInfo.fullToken)
 
                         let cask = await Cask(
-                            info: caskInfo,
-                            downloadsIn365days: analyticsDict[caskInfo.token] ?? 0,
+                            info: displayInfo,
+                            downloadsIn365days: analyticsDict[displayInfo.token] ?? 0,
                             isInstalled: isInstalled
                         )
 
@@ -135,12 +148,40 @@ actor CaskModelBuilder {
     func createCategoryViewModels(
         from categories: [Category],
         using compiledModels: CompiledCaskViewModels
-    ) -> [CategoryViewModel] {
+    ) async -> [CategoryViewModel] {
         var categoryViewModels: [CategoryViewModel] = []
 
         for category in categories {
-            if let casksInCategory = compiledModels.categoryDict[category.id] {
-                let casks = casksInCategory.sorted(by: { $0.downloadsIn365days > $1.downloadsIn365days })
+            let homebrewCasks = compiledModels.categoryDict[category.id] ?? []
+            let websiteOnlyCasks = await MainActor.run {
+                category.websiteOnlyApps.map { app in
+                    Cask(
+                        info: CaskInfo(
+                            token: app.id,
+                            fullToken: app.id,
+                            tap: "website",
+                            name: app.name,
+                            description: app.viDescription,
+                            homepageURL: app.homepage,
+                            installMethod: .website,
+                            pkgInstaller: false,
+                            warning: nil
+                        ),
+                        downloadsIn365days: 0
+                    )
+                }
+            }
+
+            let casksInCategory = homebrewCasks + websiteOnlyCasks
+
+            if !casksInCategory.isEmpty {
+                let casks = casksInCategory.sorted {
+                    if $0.downloadsIn365days == $1.downloadsIn365days {
+                        return $0.info.name < $1.info.name
+                    }
+
+                    return $0.downloadsIn365days > $1.downloadsIn365days
+                }
                 let chunkedCasks = casks.chunked(into: 2)
 
                 categoryViewModels.append(

@@ -61,7 +61,7 @@ final class ServiceManager: ObservableObject {
             } else {
                 command = "\(envPrefix) \(brewPath) \(brewArgs)"
             }
-            try await Shell.runAsync(command)
+            try await Shell.runBrewShellCommand(command)
             await loadServices()
         } catch {
             logger.error("Service command \(args.joined(separator: " ")) failed: \(error.localizedDescription)")

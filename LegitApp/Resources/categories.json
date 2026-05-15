@@ -1,16 +1,65 @@
 [
     {
-        "id": "Vietnamese Apps",
+        "id": "For Vietnamese",
         "sfSymbol": "flag.fill",
         "casks": [
             "zalo",
             "viber",
             "capcut",
             "coccoc",
+            "openkey",
+            "evkey",
+            "gotiengviet",
             "zoom",
             "telegram-desktop",
             "whatsapp",
             "obs"
+        ],
+        "apps": [
+            {
+                "id": "zalo",
+                "viDescription": "Ứng dụng nhắn tin, gọi điện và làm việc phổ biến tại Việt Nam."
+            },
+            {
+                "id": "viber",
+                "viDescription": "Ứng dụng nhắn tin và gọi điện miễn phí, phù hợp liên lạc cá nhân và nhóm."
+            },
+            {
+                "id": "capcut",
+                "viDescription": "Công cụ dựng video dễ dùng cho nội dung mạng xã hội, TikTok, Reels và YouTube Shorts."
+            },
+            {
+                "id": "coccoc",
+                "viDescription": "Trình duyệt tối ưu cho người dùng Việt Nam, hỗ trợ tiếng Việt và các tiện ích địa phương."
+            },
+            {
+                "id": "openkey",
+                "viDescription": "Bộ gõ tiếng Việt mã nguồn mở cho macOS, Windows và Linux, hỗ trợ Telex/VNI."
+            },
+            {
+                "id": "evkey",
+                "viDescription": "Bộ gõ tiếng Việt nhẹ, quen thuộc với người dùng UniKey/EVKey, hỗ trợ nhiều kiểu gõ."
+            },
+            {
+                "id": "gotiengviet",
+                "viDescription": "Bộ gõ tiếng Việt lâu đời trên macOS, tập trung vào gõ nhanh và ổn định."
+            },
+            {
+                "id": "zoom",
+                "viDescription": "Ứng dụng họp trực tuyến phổ biến cho học tập, làm việc và hội thảo."
+            },
+            {
+                "id": "telegram-desktop",
+                "viDescription": "Ứng dụng nhắn tin đa nền tảng, hỗ trợ nhóm lớn, kênh thông báo và chia sẻ file."
+            },
+            {
+                "id": "whatsapp",
+                "viDescription": "Ứng dụng nhắn tin và gọi điện phổ biến để liên lạc quốc tế."
+            },
+            {
+                "id": "obs",
+                "viDescription": "Công cụ quay màn hình và livestream miễn phí cho dạy học, họp trực tuyến và sáng tạo nội dung."
+            }
         ]
     },
     {
@@ -71,6 +120,75 @@
             "soulver",
             "unclutter"
         ]
+    },
+    {
+        "id": "AI Apps",
+        "sfSymbol": "sparkles",
+        "casks": [
+            "chatgpt",
+            "claude",
+            "google-gemini",
+            "poe",
+            "cursor",
+            "codex-app",
+            "opencat",
+            "macai",
+            "mstystudio",
+            "chatwise",
+            "chatall",
+            "anythingllm"
+        ],
+        "apps": [
+            {
+                "id": "chatgpt",
+                "viDescription": "Ứng dụng ChatGPT chính thức của OpenAI để trò chuyện, viết nội dung, học tập và xử lý công việc hằng ngày."
+            },
+            {
+                "id": "claude",
+                "viDescription": "Ứng dụng Claude chính thức của Anthropic, mạnh về đọc hiểu tài liệu, viết lách và phân tích."
+            },
+            {
+                "id": "google-gemini",
+                "viDescription": "Ứng dụng Gemini của Google để trò chuyện với AI và kết nối hệ sinh thái Google."
+            },
+            {
+                "id": "poe",
+                "viDescription": "Ứng dụng chat nhiều mô hình AI trong một nơi, tiện thử nghiệm ChatGPT, Claude và các model khác."
+            },
+            {
+                "id": "cursor",
+                "viDescription": "Trình soạn thảo code tích hợp AI, hỗ trợ viết, sửa và hiểu code trong dự án."
+            },
+            {
+                "id": "codex-app",
+                "viDescription": "Ứng dụng Codex để quản lý coding agent và tác vụ lập trình bằng AI."
+            },
+            {
+                "id": "opencat",
+                "viDescription": "Ứng dụng chat AI native cho macOS, hỗ trợ nhiều nhà cung cấp mô hình."
+            },
+            {
+                "id": "macai",
+                "viDescription": "Ứng dụng chat native cho macOS, dùng được với nhiều API LLM phổ biến."
+            },
+            {
+                "id": "mstystudio",
+                "viDescription": "Nền tảng AI desktop hỗ trợ mô hình local và online, phù hợp thử nghiệm nhiều workflow AI."
+            },
+            {
+                "id": "chatwise",
+                "viDescription": "Ứng dụng chatbot cho nhiều LLM, phù hợp người dùng muốn quản lý nhiều model trong một giao diện."
+            },
+            {
+                "id": "chatall",
+                "viDescription": "Ứng dụng gửi cùng một câu hỏi tới nhiều chatbot AI để so sánh kết quả."
+            },
+            {
+                "id": "anythingllm",
+                "viDescription": "Ứng dụng AI desktop riêng tư hơn, phù hợp làm việc với tài liệu và tri thức cá nhân."
+            }
+        ],
+        "websiteOnlyApps": []
     },
     {
         "id": "Office Tools",
