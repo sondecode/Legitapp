@@ -118,7 +118,15 @@ echo ""
 # --- Step 6: Commit & push ---
 echo "📤 Committing and pushing..."
 git add "$APPCAST"
-git commit -m "chore: release v${VERSION}"
+git commit -m "chore: release v${VERSION}" || echo "⚠️ No changes to commit"
+
+# Check if tag exists, if so delete it locally and remotely to overwrite
+if git rev-parse "v${VERSION}" >/dev/null 2>&1; then
+  echo "⚠️ Tag v${VERSION} already exists. Overwriting..."
+  git tag -d "v${VERSION}"
+  git push origin ":refs/tags/v${VERSION}" || true
+fi
+
 git tag "v${VERSION}"
 git push origin main
 git push origin "v${VERSION}"
@@ -128,17 +136,43 @@ echo ""
 # --- Step 7: Upload DMG to GitHub Release ---
 echo "🎁 Creating GitHub Release..."
 if command -v gh &>/dev/null; then
+  # Use --clobber to overwrite if release already exists
   gh release create "v${VERSION}" "$DMG_PATH" \
     --repo "$REPO" \
     --title "LegitApp v${VERSION}" \
-    --notes "Xem thay đổi tại: https://github.com/${REPO}/releases/tag/v${VERSION}"
+    --notes "Xem thay đổi tại: https://github.com/${REPO}/releases/tag/v${VERSION}" --clobber
   echo "✅ GitHub Release created: https://github.com/${REPO}/releases/tag/v${VERSION}"
 else
-  echo "⚠️  GitHub CLI (gh) chưa được cài. Tải thủ công:"
-  echo "   1. Vào https://github.com/${REPO}/releases/new"
-  echo "   2. Tag: v${VERSION}"
-  echo "   3. Upload file: $DMG_PATH"
+  echo "⚠️  GitHub CLI (gh) chưa được cài. Tải thủ công."
 fi
+
+# --- Step 8: Update Homebrew Tap ---
+echo ""
+echo "🍺 Updating Homebrew Tap..."
+TAP_REPO="sondecode/homebrew-legitapp"
+TAP_DIR="/tmp/homebrew-legitapp-$(date +%s)"
+DMG_SHA=$(shasum -a 256 "$DMG_PATH" | awk '{print $1}')
+
+git clone "https://github.com/${TAP_REPO}.git" "$TAP_DIR"
+pushd "$TAP_DIR"
+
+if [[ -f "Casks/legitapp.rb" ]]; then
+  # Update version and sha256 using sed
+  sed -i '' "s/version \".*\"/version \"${VERSION}\"/" Casks/legitapp.rb
+  sed -i '' "s/sha256 \".*\"/sha256 \"${DMG_SHA}\"/" Casks/legitapp.rb
+  
+  git add Casks/legitapp.rb
+  git commit -m "Update LegitApp to v${VERSION}"
+  git push origin main
+  echo "✅ Homebrew Tap updated: https://github.com/${TAP_REPO}"
+else
+  echo "❌ Error: Casks/legitapp.rb not found in tap repository."
+fi
+
+popd
+# Clean up
+rm -rf "$TAP_DIR"
+
 
 echo ""
 echo "🎉 Release v${VERSION} hoàn tất!"
