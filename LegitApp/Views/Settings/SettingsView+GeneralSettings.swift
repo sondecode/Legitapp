@@ -56,7 +56,7 @@ extension SettingsView {
                         Text(lang.name).tag(lang.code)
                     }
                 }
-                .onChange(of: selectedLanguage) { newValue in
+                .onChange(of: selectedLanguage) { _, newValue in
                     UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
                     UserDefaults.standard.synchronize()
                     showRestartAlert = true
@@ -102,16 +102,16 @@ extension SettingsView {
                 Toggle("Show menu bar icon", isOn: $showMenuBarIcon)
                 Toggle("Keep running when window is closed", isOn: $keepRunningInMenuBar)
                     .disabled(!showMenuBarIcon)
-                    .onChange(of: showMenuBarIcon) { enabled in
+                    .onChange(of: showMenuBarIcon) { _, enabled in
                         if !enabled { keepRunningInMenuBar = false }
                     }
             }
             .padding()
-            .onChange(of: colorSchemePreference) {
+            .onChange(of: colorSchemePreference) { _, newValue in
                 // Don't remove this!
                 // This is here because changing the .preferredColorScheme view modifier is bugged
                 // When it's set back to nil, parts of the UI don't default back to the system color scheme
-                if $0 == .system && !fixingColor {
+                if newValue == .system && !fixingColor {
                     // Set fixingColor to true, so we don't recursively call this function
                     self.fixingColor = true
 

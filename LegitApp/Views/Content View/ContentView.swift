@@ -61,7 +61,7 @@ struct ContentView: View {
             }
         }
         // Clear search
-        .onChange(of: searchInput) { newValue in
+        .onChange(of: searchInput) { _, _ in
             // Limit search characters
             searchInput = String(searchInput.prefix(30))
 
