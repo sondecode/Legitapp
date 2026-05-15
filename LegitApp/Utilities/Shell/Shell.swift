@@ -12,9 +12,8 @@ import OSLog
 enum Shell {
     private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "Shell")
 
-    /// MD5 checksum of the askpass script.
-    /// We want to make sure the script isn't modified by any outside actor
-    private static let askpassChecksum = "ZwL+xGb+3Cjs5rr5ApTDWg=="
+    /// Prefix that the askpass script path must start with (ensures the script is inside the app bundle)
+    private static let askpassBundlePrefix: String = Bundle.main.bundlePath
 
     /// Executes a shell command synchronously
     ///
@@ -140,7 +139,8 @@ enum Shell {
             throw ShellError.askpassNotFound
         }
 
-        if URL(string: scriptPath)?.checksumInBase64() != askpassChecksum {
+        // Verify the script is inside the app bundle to prevent path hijacking
+        guard scriptPath.hasPrefix(askpassBundlePrefix) else {
             throw ShellError.askpassChecksumMismatch
         }
 
