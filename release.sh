@@ -6,7 +6,14 @@
 # =============================================================
 set -euo pipefail
 
-SIGN_UPDATE="/Users/gager/Library/Developer/Xcode/DerivedData/LegitApp-berzvczsnuquyodcaczwgeeowakc/SourcePackages/artifacts/sparkle/Sparkle/bin/sign_update"
+# Find sign_update path dynamically
+SIGN_UPDATE=$(find ~/Library/Developer/Xcode/DerivedData -name sign_update -path "*/Sparkle/bin/sign_update" | head -n 1)
+
+if [[ -z "$SIGN_UPDATE" ]]; then
+  echo "❌ Could not find sign_update utility in DerivedData."
+  exit 1
+fi
+
 APPCAST="docs/appcast.xml"
 REPO="sondecode/legitapp"
 
@@ -34,8 +41,13 @@ echo "🔏 Signing DMG..."
 SIGN_OUTPUT=$("$SIGN_UPDATE" "$DMG_PATH")
 echo "$SIGN_OUTPUT"
 
-# Extract edSignature from output
-ED_SIGNATURE=$(echo "$SIGN_OUTPUT" | grep -o '"edSignature": "[^"]*"' | cut -d'"' -f4)
+# Extract edSignature from output (handles both JSON and key=value formats)
+if echo "$SIGN_OUTPUT" | grep -q '"edSignature":'; then
+  ED_SIGNATURE=$(echo "$SIGN_OUTPUT" | grep -o '"edSignature": "[^"]*"' | cut -d'"' -f4)
+else
+  ED_SIGNATURE=$(echo "$SIGN_OUTPUT" | grep -o 'sparkle:edSignature="[^"]*"' | cut -d'"' -f2)
+fi
+
 if [[ -z "$ED_SIGNATURE" ]]; then
   echo "❌ Could not extract edSignature from sign_update output"
   exit 1
