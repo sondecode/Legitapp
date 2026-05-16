@@ -90,6 +90,11 @@ macOS Homebrew Cask manager with a Vietnamese-first experience.
 
 LegitApp is a free and open-source macOS application that simplifies installing and managing third-party apps via [Homebrew](https://brew.sh/). Primarily designed for the Vietnamese community, it offers a handpicked gallery of popular local and international applications.
 
+<img width="1362" height="1053" alt="image" src="https://github.com/user-attachments/assets/df94c6ce-7c30-418c-a860-7c7629faad45" />
+
+<img width="309" height="389" alt="image" src="https://github.com/user-attachments/assets/db5f7c21-9930-4601-8b27-aa0e186e9c5a" />
+
+
 ## Key Features
 
 - One-click install/update/uninstall
