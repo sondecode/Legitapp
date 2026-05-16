@@ -73,6 +73,24 @@ struct DependencyManager {
         await MainActor.run { progressObject.phase = .done }
         Self.logger.notice("Brew installed successfully!")
     }
+
+    /// Verifies that every dependency needed by the main app is ready to use.
+    ///
+    /// Homebrew may bootstrap Portable Ruby on first use. Running a real brew command here keeps
+    /// the setup screen open until that bootstrap has finished, so the main catalog load does not
+    /// fail with Homebrew lock errors.
+    static func prepareForMainApp() async throws {
+        guard await BrewPaths.isCommandLineToolsInstalled() else {
+            throw DependencyError.xcodeCommandLineToolsNotInstalled
+        }
+
+        guard await BrewPaths.isSelectedBrewPathValid() else {
+            throw DependencyError.invalidBrewInstallation
+        }
+
+        _ = try await Shell.runBrewCommand(["--version"])
+        _ = try await Shell.runBrewCommand(["list", "--cask", "--full-name"])
+    }
     
     /// Installs Homebrew
     static func installHomebrew() async throws -> Void {

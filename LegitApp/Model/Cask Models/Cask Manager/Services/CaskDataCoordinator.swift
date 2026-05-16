@@ -35,20 +35,20 @@ final class CaskDataCoordinator {
 
     /// Loads all cask data and builds the necessary models
     /// - Returns: Complete cask data including models and collections
-    func loadAllCaskData() async throws -> CaskDataResult {
+    func loadAllCaskData(preferCachedCatalog: Bool = false, includeDeferredData: Bool = true) async throws -> CaskDataResult {
         logger.info("Starting to load cask data")
 
         // Load data concurrently
         async let categories = try await loadCategories()
-        async let caskInfo = loadCaskInfo()
-        async let tapCaskInfo = loadTapCaskInfo()
-        async let analytics = loadAnalyticsData()
+        async let caskInfo = loadCaskInfo(preferStaleCache: preferCachedCatalog)
+        async let tapCaskInfo = loadTapCaskInfoIfNeeded(includeDeferredData)
+        async let analytics = loadAnalyticsData(preferStaleCache: preferCachedCatalog)
         async let installedCasks = getInstalledCasks()
-        async let outdatedCasks = getOutdatedCasks()
+        async let outdatedCasks = getOutdatedCasksIfNeeded(includeDeferredData)
 
         // Wait for all async operations to complete
-        let (caskInfoResult, tapCaskInfoResult, analyticsResult, installedCasksResult, outdatedCasksResult) =
-        try await (caskInfo, tapCaskInfo, analytics, installedCasks, outdatedCasks)
+        let (categoriesResult, caskInfoResult, tapCaskInfoResult, analyticsResult, installedCasksResult, outdatedCasksResult) =
+        try await (categories, caskInfo, tapCaskInfo, analytics, installedCasks, outdatedCasks)
 
         // Combine cask info from main repository and taps
         let combinedCaskInfo = caskInfoResult + tapCaskInfoResult
@@ -63,13 +63,13 @@ final class CaskDataCoordinator {
             installedCasks: installedCasksResult,
             outdatedCasks: outdatedCasksResult,
             analyticsDict: analyticsDict,
-            categories: categories
+            categories: categoriesResult
         )
 
         // Create category view models
         logger.info("Creating category view models")
         let categoryViewModels = await modelBuilder.createCategoryViewModels(
-            from: try categories,
+            from: categoriesResult,
             using: compiledCaskModels
         )
 
@@ -103,7 +103,16 @@ final class CaskDataCoordinator {
     }
 
     /// Loads cask information with caching strategy
-    private func loadCaskInfo() async throws -> [CaskInfo] {
+    private func loadCaskInfo(preferStaleCache: Bool) async throws -> [CaskInfo] {
+        if preferStaleCache,
+           let cached = try? await cacheService.loadCachedModelIfAvailable(
+            from: CaskCacheService.caskCacheURL,
+            as: [CaskInfo].self
+           ) {
+            logger.info("Loaded cask info from startup cache")
+            return cached
+        }
+
         return try await cacheService.loadModelWithCaching(
             networkFetch: { @Sendable in
                 let data = try await self.networkService.fetchCaskInfo()
@@ -119,8 +128,25 @@ final class CaskDataCoordinator {
         return await networkService.fetchTapCaskInfo()
     }
 
+    private func loadTapCaskInfoIfNeeded(_ enabled: Bool) async -> [CaskInfo] {
+        guard enabled else {
+            return []
+        }
+
+        return await loadTapCaskInfo()
+    }
+
     /// Loads analytics data with caching strategy
-    private func loadAnalyticsData() async throws -> BrewAnalytics {
+    private func loadAnalyticsData(preferStaleCache: Bool) async throws -> BrewAnalytics {
+        if preferStaleCache,
+           let cached = try? await cacheService.loadCachedModelIfAvailable(
+            from: CaskCacheService.analyticsCacheURL,
+            as: BrewAnalytics.self
+           ) {
+            logger.info("Loaded analytics from startup cache")
+            return cached
+        }
+
         return try await cacheService.loadModelWithCaching(
             networkFetch: { @Sendable in
                 let data = try await self.networkService.fetchAnalyticsData()
@@ -134,6 +160,14 @@ final class CaskDataCoordinator {
     /// Gets the set of installed casks
     private func getInstalledCasks() async throws -> Set<CaskId> {
         return try await installedService.getInstalledCasks()
+    }
+
+    private func getOutdatedCasksIfNeeded(_ enabled: Bool) async throws -> Set<CaskId> {
+        guard enabled else {
+            return []
+        }
+
+        return try await getOutdatedCasks()
     }
 
     private static let categoriesCacheURL = URL.cachesDirectory

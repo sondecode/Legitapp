@@ -65,11 +65,26 @@ struct CaskCacheService {
         }
     }
 
+    /// Loads cached data without checking freshness.
+    ///
+    /// Used for fast startup: stale catalog data is still much better than an empty main screen,
+    /// and a background refresh can replace it shortly after launch.
+    func loadCachedModelIfAvailable<T: Decodable>(from cacheURL: URL, as type: T.Type) async throws -> T {
+        return try await loadFromCache(from: cacheURL, as: type)
+    }
+
     /// Determines if data should be loaded from cache based on update frequency settings
     /// - Parameter url: URL of the cache file to check
     /// - Returns: True if cache is fresh enough to be used
     private func shouldLoadFromCache(url: URL) throws -> Bool {
-        let updateFreqRawValue = UserDefaults.standard.integer(forKey: Preferences.catalogUpdateFrequency.rawValue)
+        let defaults = UserDefaults.standard
+        let updateFreqRawValue: Int
+
+        if defaults.object(forKey: Preferences.catalogUpdateFrequency.rawValue) == nil {
+            updateFreqRawValue = CatalogUpdateFrequency.weekly.rawValue
+        } else {
+            updateFreqRawValue = defaults.integer(forKey: Preferences.catalogUpdateFrequency.rawValue)
+        }
 
         guard let updateFreq = CatalogUpdateFrequency(rawValue: updateFreqRawValue) else {
             throw CaskLoadError.failedToGetUpdateFrequency

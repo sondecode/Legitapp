@@ -27,8 +27,16 @@ extension ContentView {
         }
 
         do {
-            try await caskManager.loadData()
+            try await caskManager.loadData(preferCachedCatalog: true, includeDeferredData: false)
             brokenInstall = false
+
+            Task {
+                do {
+                    try await caskManager.loadData(preferCachedCatalog: false, includeDeferredData: true)
+                } catch {
+                    logger.warning("Deferred cask refresh failed. Reason: \(error.localizedDescription)")
+                }
+            }
         } catch {
             loadAlert.show(title: "Couldn't load app catalog", message: error.localizedDescription)
             logger.error("Initial cask load failure. Reason: \(error.localizedDescription)")

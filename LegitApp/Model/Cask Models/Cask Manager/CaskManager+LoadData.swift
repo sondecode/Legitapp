@@ -10,11 +10,14 @@ import SwiftUI
 
 extension CaskManager {
     /// Loads all cask data using the coordinator
-    func loadData() async throws {
+    func loadData(preferCachedCatalog: Bool = false, includeDeferredData: Bool = true) async throws {
         Self.logger.info("Starting data load process")
 
         // Load data through coordinator
-        let result = try await dataCoordinator.loadAllCaskData()
+        let result = try await dataCoordinator.loadAllCaskData(
+            preferCachedCatalog: preferCachedCatalog,
+            includeDeferredData: includeDeferredData
+        )
 
         // Update the manager with the results
         self.casks = result.allCasks

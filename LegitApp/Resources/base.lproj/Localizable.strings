@@ -70,6 +70,10 @@
 "You will be prompted to install Xcode Command Line Tools. Please select \"Install\" as it is required for this application to work." = "You will be prompted to install Xcode Command Line Tools. Please select \"Install\" as it is required for this application to work.";
 "All set!" = "All set!";
 "Start Using %@" = "Start Using %@";
+"LegitApp will check required components before opening the main screen. Please wait until this step finishes, otherwise the app cannot work correctly." = "LegitApp will check required components before opening the main screen. Please wait until this step finishes, otherwise the app cannot work correctly.";
+"Preparing LegitApp..." = "Preparing LegitApp...";
+"Start Using LegitApp" = "Start Using LegitApp";
+"Dependencies are not ready" = "Dependencies are not ready";
 
 
 // Categories

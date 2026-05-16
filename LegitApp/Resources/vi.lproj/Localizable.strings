@@ -18,3 +18,9 @@
 "Retry" = "Thử lại";
 "For Vietnamese" = "Dành cho người Việt";
 "AI Apps" = "Ứng dụng AI";
+"Installing dependencies" = "Đang cài đặt thành phần cần thiết";
+"All set!" = "Đã sẵn sàng!";
+"LegitApp will check required components before opening the main screen. Please wait until this step finishes, otherwise the app cannot work correctly." = "LegitApp sẽ kiểm tra các thành phần bắt buộc trước khi mở màn hình chính. Vui lòng chờ bước này hoàn tất, nếu không ứng dụng sẽ không hoạt động đúng.";
+"Preparing LegitApp..." = "Đang chuẩn bị LegitApp...";
+"Start Using LegitApp" = "Bắt đầu dùng LegitApp";
+"Dependencies are not ready" = "Thành phần cần thiết chưa sẵn sàng";

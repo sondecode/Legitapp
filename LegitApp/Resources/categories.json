@@ -7,13 +7,11 @@
             "viber",
             "capcut",
             "coccoc",
-            "openkey",
+            "xkey",
             "evkey",
             "gotiengviet",
             "zoom",
-            "telegram-desktop",
-            "whatsapp",
-            "obs"
+            "telegram-desktop"
         ],
         "apps": [
             {
@@ -51,14 +49,6 @@
             {
                 "id": "telegram-desktop",
                 "viDescription": "Ứng dụng nhắn tin đa nền tảng, hỗ trợ nhóm lớn, kênh thông báo và chia sẻ file."
-            },
-            {
-                "id": "whatsapp",
-                "viDescription": "Ứng dụng nhắn tin và gọi điện phổ biến để liên lạc quốc tế."
-            },
-            {
-                "id": "obs",
-                "viDescription": "Công cụ quay màn hình và livestream miễn phí cho dạy học, họp trực tuyến và sáng tạo nội dung."
             }
         ]
     },
@@ -118,7 +108,13 @@
             "rectangle",
             "shottr",
             "soulver",
-            "unclutter"
+            "unclutter",
+            "dockdoor",
+            "xanpper",
+            "mos",
+            "monitorcontrol",
+            "maccy",
+            "macs-fan-control"
         ]
     },
     {
